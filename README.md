@@ -79,35 +79,6 @@ By the end of this workshop, you will have:
 - ☕ Tea/coffee throughout the day
 - 🍽️ Lunch
 
-## 💰 Workshop Fees
-
-There is a fee payable for this workshop. These fees cover:
-
-- 🏢 Venue hire costs
-- ☕ Food and beverages
-- 🍽️ Lunch
-- 📋 All associated hosting expenses
-
-> **Important:** Our workshop instructor team are volunteers and are not being paid by South Coast Summit.
-
-## 🛠️ Technical Setup
-
-Before the workshop, please ensure you have:
-
-1. **Development Environment**
-   - Visual Studio Code or preferred IDE
-   - Node.js (latest LTS version)
-   - Git for version control
-
-1. **Accounts & Access**
-   - Power Platform developer account
-   - Azure subscription (trial is sufficient)
-   - GitHub account for repository access
-
-1. **Browser**
-   - Modern web browser (Chrome, Edge, Firefox)
-   - Ensure cookies and JavaScript are enabled
-
 ## 📚 Workshop Materials
 
 All workshop materials, code samples, and exercises will be available in this repository. Make sure to:
