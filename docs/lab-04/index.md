@@ -1,6 +1,6 @@
 # Lab 04: Setup an MCP Server locally and add it to Microsoft Copilot Studio
 
-In this part, you will learn about how to run a Model Context Protocol (MCP) server and how to connect it to Microsoft Copilot Studio. Zava has created an MCP server for inventory management that provides tools for managing products (like get_products and add_product), stores (such as get_stores and add_store), and inventory operations (including list_inventory_by_store).
+In this part, you will learn about how to run a Model Context Protocol (MCP) server and how to connect it to Microsoft Copilot Studio. Zava has created an MCP server for inventory management that provides tools for managing products (like `get_products` and `add_product`), stores (such as `get_stores` and `add_store`), and inventory operations (including `list_inventory_by_store`).
 
 The MCP server is available via the following link: [download MCP server](https://raw.githubusercontent.com/microsoft/scs25-copilot-studio-extensibility/refs/heads/main/src/ZavaInventoryMCP.zip)
 
