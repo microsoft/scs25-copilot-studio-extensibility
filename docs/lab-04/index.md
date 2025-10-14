@@ -6,7 +6,7 @@ The MCP server is available via the following link: [download MCP server](https:
 
 Make sure to unpack the folder on your machine and copy the folder to the C-drive, so that you have the MCP server available here: **C:\ZavaInventoryMCP**.
 
-## Open the MCP Server in Visual Studio Code
+## 📂 Open the MCP Server in Visual Studio Code
 
 1. Open Visual Studio Code by selecting Visual Studio Code in the taskbar
 1. Select **File > Open Folder**
@@ -18,7 +18,7 @@ Make sure to unpack the folder on your machine and copy the folder to the C-driv
 
 This will open the Zava Inventory Management MCP server in Visual Studio Code. Let's explore the MCP Server to see what files are in there.
 
-## Explore the Zava Inventory Management MCP Server
+## 🔍 Explore the Zava Inventory Management MCP Server
 
 The MCP server folder contains several key files that make up the MCP Server:
 
@@ -41,7 +41,7 @@ Expand the **Data** folder to see what's in this folder.
 
 Make sure to look around in these files to see what's going on in the server. Now, let's install the dependencies so that we can run the server locally.
 
-## Install dependencies
+## 📦 Install dependencies
 
 1. Open the terminal by selecting **Terminal > New Terminal**
 1. Make sure you are in the following folder: **C:\ZavaInventoryMCP**
@@ -63,7 +63,7 @@ Make sure to look around in these files to see what's going on in the server. No
     pip install -r src/requirements.txt
     ```
 
-## Run the MCP Server
+## ▶️ Run the MCP Server
 
 1. Now it's time to run the MCP Server. Use the following command to start the Zava Inventory MCP Server.
 
@@ -73,7 +73,7 @@ Make sure to look around in these files to see what's going on in the server. No
 
 After running the MCP Server, you're not there yet. The MCP Server is only running locally right now, so you need to make sure the MCP Server is available through a public URL. This is a requirement for Microsoft Copilot Studio. Because it's a cloud service, it's not able to reach your localhost.
 
-## Configure a dev tunnel
+## 🌐 Configure a dev tunnel
 
 To make sure we can reach the MCP Server from Microsoft Copilot Studio, we'll add a dev tunnel. During these steps, you will be prompted to log in. Use the Entra ID account from this workshop when you are prompted to log in.
 
@@ -150,7 +150,7 @@ In the terminal at the bottom of Visual Studio Code, we are going to configure a
 
 We are going to fix this error in the next steps.
 
-## Add the MCP Server in Microsoft Copilot Studio
+## 🔗 Add the MCP Server in Microsoft Copilot Studio
 
 1. Open your browser and go back to the environment where you create the agent earlier
 1. Open your agent
