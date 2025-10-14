@@ -81,11 +81,12 @@ By the end of this workshop, you will have:
 
 ## 📚 Workshop Materials
 
-All workshop materials, code samples, and labs will be available in this repository. Make sure to:
-
-1. **Clone this repository** before the workshop
-1. **Check for updates** the day before the event
-1. **Follow the setup guides** in each lab folder
+| Lab | Description | Link |
+|-----|-------------|------|
+| **Lab 01** | Setup | [Go to Lab 01](./lab-01/index.md) |
+| **Lab 02** | Build Agent with Copilot Studio | [Go to Lab 02](./lab-02/index.md) |
+| **Lab 03** | Build Connector | [Go to Lab 03](./lab-03/index.md) |
+| **Lab 04** | Model Context Protocol | [Go to Lab 04](./lab-04/index.md) |
 
 ## 🔗 Useful Links
 
