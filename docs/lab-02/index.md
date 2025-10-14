@@ -12,7 +12,7 @@ Now lets make sure the users of our agent can ask for content - and lets use a d
 
 There is a lot of content available in our agent now, but we haven't shown one of the hidden gems of Copilot Studio yet: AI Prompts!
 
-Actions can be used to extend the capabilities of agents. You can add multiple types of actions to your agents in Microsoft Copilot Studio:
+Tools can be used to extend the capabilities of agents. You can add multiple types of tools to your agents in Microsoft Copilot Studio:
 
 - **Prebuilt connector action**, which use Power Platform connectors to access data from other systems, such as popular enterprise products like Salesforce, Zendesk, MailChimp, and GitHub.
 - **Custom connector action**, where a connector can be built to access data from public or private APIs.
@@ -22,9 +22,9 @@ Actions can be used to extend the capabilities of agents. You can add multiple t
 
 ### Add a prompt action to a topic node
 
-In this part of the lab we’ll be creating a **prompt action** in a topic., which is the **Generate content or extract insights** action from the AI Builder connector.
+In this part of the lab we’ll be creating a **prompt action** in a topic, which is the **Generate content or extract insights** action from the AI Builder connector.
 
-Prompt actions in topics help guide the agent's response in a semi-scripted conversation by using the generative AI models from AI Builder and natural language understanding to address specific scenarios for your agents.
+Prompt tools in topics help guide the agent's response in a semi-scripted conversation by using the generative AI models from AI Builder and natural language understanding to address specific scenarios for your agents.
 
 For this lab, we'll add a Topic that calls a prompt action to generate questions for a quiz.
 

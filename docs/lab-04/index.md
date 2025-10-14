@@ -238,7 +238,7 @@ We are going to fix this error in the next steps.
 
     ![Activity Map after asking to list the available products in the Zava Amsterdam store.](./assets/ListAvailableProductsZavaAmsterdamActivityMap.png)
 
-    But now - we only did get actions, wouldn't it be good to also add something?
+    But now - we only got information from the MCP Server, but wouldn't it be good to also add something?
 
 1. Send the following message to your agent via the *Test your agent* panel:
 
