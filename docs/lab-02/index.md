@@ -8,416 +8,186 @@
 
 Now lets make sure the users of our agent can ask for content - and lets use a different option here. Instead of using knowledge, we will create a topic with an adaptive card. The adaptive card will be used to make sure not only text is shown, but also a bit of design is shown.
 
-### 🤔 What is an Adaptive Card?
-
-An **Adaptive Card** is way to create interactive, visually rich UI elements that can be embedded in apps like Microsoft Teams, Microsoft Outlook or agents. It is a structured JSON object that defines the layout and content of a card:
-
-- What elements appear on the card - text, images, buttons
-- How those elements are arranged
-- What actions users can take such as submitting a form or opening a link
-
-    ![Adaptive Card](assets/8.0_01_AdaptiveCard.png)
-
-#### Why Adaptive Cards matter in Copilot Studio
-
-Imagine you're building an agent that asks users for their name, email, or feedback. If you just use plain text, the conversation can feel boring or hard to follow. That’s where Adaptive Cards come in!
-
-1. **Makes conversations interactive** - instead of sending text as messages to the user, you can show buttons, forms, images and more.
-    - Example: a card can ask the user to fill in their name and email in a clean form.
-
-1. **Look great everywhere** - Adaptive Cards automatically match the style of the app they're in, such as Microsoft 365 Copilot chat or Microsoft Teams. You don't need to worry about dark mode, font, or layouts - it adapts.
-
-1. **Easy to build with JSON** - you define the card using JSON code (think _recipe_ for the UI). Copilot Studio helps you preview your card before adding it to the topic.
-
-1. **Collect and use data** - you can use the card to ask questions, collect answers, and use that data in the conversation flow.
-    - Example: Ask for a user's phone number, then show a confirmation card with their phone number.
-
-1. **Boost user experience** - cards make your agent feel more interactive. It's a more clean, clickable, and user-friendly type of interface.
-
-### 🐱 Is _JSON_ a person?
-
-Pronounced as "Jason," it's not a person 😅
-
-JSON, otherwise known as _JavaScript Object Notation_ is a lightweight format used to structure data. It's easy to read and write, and looks like a series of key-value pairs inside curly braces {}.
-
-This is one of the options to use when adding an adaptive card to your topic.
-
-![Adaptive card node properties](assets/8.0_02_AdaptiveCardPropertiesPane.png)
-
-### 👀 I see another option for building an adaptive card using _formula_
-
-Remember how we learnt about Power Fx in [Mission 07 - Using Power Fx in your nodes](../07-add-new-topic-with-trigger/README.md#what-power-fx-can-do-in-topics) The same can be applied in Adaptive Cards within Copilot Studio.
-
-As a recap,
-
-!!! note
-    Power Fx is a low-code programming language used to add logic and dynamic behavior to your agent. It's the same language used in Microsoft Power Apps, and it's designed to be simple and Excel-like, making it easy for developers and non-developers.
-
-#### How Power Fx works in Adaptive Cards
-
-When you design an Adaptive Card in Copilot Studio, you can use Power Fx formulas to:
-
-- Dynamically insert values such as user names, dates or status.
-- Format text or numbers such as show currency or round numbers.
-- Show or hide elements based on conditions.
-- Customize responses based on user input, variables, outputs from conversation nodes.
-
-For example,
-
-"`Hello`" & `System.User.DisplayName`
-
-This formula combines the word "Hello" with the user's name dynamically.
-
-#### Why it's useful
-
-1. **Personalization**
-
-    You can tailor message to each user, making interactions feel more natural and relevant.
-
-1. **Dynamic content**
-
-    Cards can display real data from variables and outputs from conversation nodes.
-
-1. **Smart logic**
-
-    You can control what users see or interact with based on conditions, improving usability and reducing errors.
-
-1. **Low-code friendly**
-
-    Power Fx is a low-code programming language. As mentioned earlier, it's readable, intuitive and similar to Excel formulas.
-
-### 👷🏻‍♀️ Building with the Adaptive Card Designer
-
-The **Adaptive Card Designer** is a visual tool that lets you build interactive message cards using drag-and-drop elements like text, images, buttons, and inputs. Its purpose is to help you create rich, dynamic messages without writing complex code, making it easier to design user-friendly interfaces.
-
-The designer tool helps you build the card visually, but behind the scenes, it's generating the JSON object for you. You can also switch to _formula_ which enables Power Fx expressions to be used in the card to display data from else where.
-
-### 🎨 Understanding the Adaptive Card Designer
-
-![Adaptive Card Designer](assets/8.0_03_AdaptiveCardPropertiesPane.png)
-
-#### A) Card Elements
-
-These are the building blocks of your adaptive card. You can drag and drop elements such as the following:
-
-- **TextBlock** to display text.
-- **Image** to show pictures.
-- **FactSet** for key-value pairs.
-- **Input fields** to display text boxes, date pickers, toggles.
-- **Actions** to display buttons such as _Submit_, _Open URL_, or _Show Card_.
-
-Each element has its own purpose and can be styled or configured.
-
-#### B) Card Viewer
-
-This is the **Preview** area where you see how your card will look like in real time. As you add or edit elements, the viewer updates instantly to reflect changes. This enables you to make iterative updates and see the design output at the same time.
-
-#### C) Card Structure
-
-This shows the **hierarchy and layout** of your card. For example:
-
-- A card might start with a **TextBlock** for the title.
-- Then a **ColumnSet** with an image on one side and text on the other.
-- Followed by a **FactSet** and some **Action buttons**.
-
-It helps you understand how elements are nested and organized.
-
-#### D) Element Properties
-
-When you click on any element in the card, this panel lets you **customize its settings**:
-
-- Change text size, weight, or color.
-- Set image URLs or alt text.
-- Configure input options like placeholder text or default values.
-
-This is where you fine-tune each element.
-
-#### E) Card Payload Editor
-
-This is the **raw JSON code** behind your card. Advanced users can edit this directly to:
-
-- Use templating features.
-- Copy/paste card definitions.
-
-Even if you're new to the Adaptive Card designer, it's helpful to see how the visual design translates into codes.
-
-!!! tip "Tip - Check out the Adaptive Card samples"
-
-    1. Browse to [https://adaptivecards.microsoft.com/designer](https://adaptivecards.microsoft.com/designer).
-    2. Select **New card** to see a list of samples you can choose and modify.
-    3. Note that this designer is external (web-based). When you build your card in the web-based Adaptive Card Designer, copy the JSON from the Card Payload Editor.
-    4. Paste the JSON into your adaptive card in your agent in Copilot Studio.
-
-    ![Adaptive Card Designer Samples](assets/8.0_04_AdaptiveCardDesignerSamples.png)
-
-### 🌵 Common use cases
-
-The following are common use cases for Adaptive Cards in Copilot Studio when used in the **Send a message** or **Ask a question** nodes.
-
-1. **Forms and data collection**
-
-    Use adaptive cards to collect structured input from users, such as:
-
-    - Leave requests
-    - Feedback forms
-    - Contact information
-    - Appointment scheduling
-
-1. **Displaying dynamic information**
-
-    Shows users personalized or real-time data in a clean, readable format from enterprise sources such as ServiceNow, SAP, Dynamics 365, SharePoint etc.
-
-    - Order summaries
-    - Account balances
-    - Ticket or case status
-    - Upcoming events or deadlines
-
-1. **Interactive choices**
-
-    Let users make selections directly in the conversation:
-
-    - Choose from a list of options, for example product categories, support topics.
-    - Confirm or cancel action.
-    - Rate a service or experience.
-
-1. **Triggering actions**
-
-    Include buttons that trigger further steps in the conversation internally or externally.
-
-    - "Submit request"
-    - "View details"
-
-### ⭐ Best practices
-
-Here are some best practices for creating Adaptive Cards for agents in Copilot Studio.
-
-1. **Keep it simple and focused**
-
-    - Design cards with a clear purpose, don’t overload them with too many elements.
-    - Use concise text and intuitive layouts to guide users through the interaction.
-
-1. **Be intentional with inputs**
-
-    - Include only the necessary input elements such as text, date choices, to avoid overwhelming users.
-    - Use labels to make inputs easy to understand.
-
-1. **Structure for readability**
-
-    - Use **TextBlocks** for headings and instructions.
-    - Group related elements using **Containers** or **ColumnSets** to improve visual flow.
-
-1. **Make Action elements clear**
-
-    - Use **Action.Submit** and or **Action.OpenUrl** with clear button titles like "Submit Request" or "View Details"
-    - Avoid vague labels like "Click here"
-
-1. **Design for adaptability**
-
-    - Assume the card may be viewed on different screen sizes.
-    - Avoid fixed widths and use flexible layouts like **ColumnSets** for responsiveness.
-
-1. **Use dynamic content when possible**
-
-    - Bind card elements to variables or outputs from nodes using Power Fx to personalize the user experience.
-    - For example, show the user's name or current status dynamically.
-
-### 🧪 Lab 08 - Add adaptive cards and enhance topic capabilities
-
 We're now going to learn how to enhance our topic with adaptive cards and using advanced functionality of topics and nodes.
 
-- [8.1 Create a new topic with an adaptive card for user to submit their request](#81-create-a-new-topic-with-an-adaptive-card-for-user-to-submit-their-request)
-- [8.2 Update agent instructions to invoke Request device topic](#82-update-agent-instructions-to-invoke-request-device-topic)
-
-#### ✨ Use case
-
-**As an** employee
-
-**I want to** request a device
-
-**So that I** can request a device from the list of available devices
-
-Let's begin!
-
-#### Prerequisites
-
-1. **SharePoint list**
-
-    We'll be using the **Devices** SharePoint list from [Lesson 00 - Course Setup - Step 3: Create new SharePoint site](../00-course-setup/README.md#step-4-create-new-sharepoint-site).
-
-    If you have not set up the **Devices** SharePoint list, please head back to [Lesson 00 - Course Setup - Step 3: Create new SharePoint site](../00-course-setup/README.md#step-4-create-new-sharepoint-site).
-
-1. **Contoso Helpdesk Copilot**
-
-    We're going to use the same agent created previously in [Lesson 06 - Create a custom agent using natural language with Copilot and grounding it with your data](../06-create-agent-from-conversation/README.md).
-
-#### 8.1 Create a new topic with an adaptive card for user to submit their request
-
-We'll create a new topic that will handle a user's device request. This new topic will contain an **Ask with adaptive card** node to enable user interaction with the agent.
-
-Let's begin!
-
-1. Select the **Topics** tab, then select **+ Add a topic from blank**.
-
-    ![Select Topics tab](assets/8.1_01_NewTopic.png)
-
-1. Name the topic as the following,
-
-    ```text
-    Request device
-    ```
-
-    Enter the following as the description for the trigger.
-
-    ```text
-    This topic helps users request a device when they answer yes to the question that asks the user if they would like to request one of these devices.
-    ```
-
-    ![Topic Name and trigger Description](assets/8.1_02_TopicNameAndTriggerDescription.png)
-
-1. Next, add an **Ask with adaptive card** node. This node will display an interactive card for the user to select which device they would like to request.
-
-    ![Select Ask with adaptive card node](assets/8.1_03_AddAskWithAdaptiveCard.png)
-
-1. Select the node and the **Adaptive Card Node properties** pane will appear. We're now going to edit the JSON. Select **Edit adaptive card**. Select **Edit adaptive card**.
-
-    ![Edit adaptive card](assets/8.1_04_EditAdaptiveCard.png)
-
-1. This is the **Adaptive Card Designer** where you can design your card and see the card design in-real time.
-
-    Try dragging and dropping the **TextBlock** and **FactSet** card elements to the authoring canvas, the card viewer area. Notice how the card structure and card payload editor updates as the two card elements were added. You can directly update the card payload editor and the element properties pane.
-
-    ![Drag and drop card elements](assets/8.1_05_DragAndDropCardElements.png)
-
-1. Select **Preview** to view the card in different widths.
-
-    ![Select preview](assets/8.1_06_PreviewAdaptiveCard.png)
-
-1. The preview will load where you'll see different card outputs by width.
-
-    ![Preview card at different widths](assets/8.1_07_PreviewCardWidths.png)
-
-1. Exit out of **Preview** by selecting the **x icon** and select **Undo** in the designer to remove the two card elements previously added.
-
-    ![Undo](assets/8.1_08_Undo.png)
-
-1. Click into the **Card payload editor** and select all lines using the Windows keyboard shortcut of _Ctrl + A_ or using the Mac keyboard shortcut of _Command + A_, followed by deleting the lines. **Paste** the JSON from the [Request devices .JSON file](assets/8.1_RequestDevice.json).
-
-    ![Clear card payload editor](assets/8.1_09_SelectAll.png)
-
-1. Notice how the **Card Preview** now includes elements that display some text and a list of available devices.
-
-    This JSON is currently a placeholder and preview to what we'll use as the base for our card but in the form of a formula rather than JSON since we're going to reference the **global variable**, `Global.VarDevices.value`, that stores the response of the **Get items** SharePoint connector action.
-
-    Select **Save** and select **Close** to exit from the Adaptive card designer modal.
-
-    ![Select Save](assets/8.1_10_DeviceRequestCard.png)
-
-1. Close the **Adaptive Card Node properties** panel by selecting the **X** icon.
-
-    ![Close Adaptive Card Node properties panel](assets/8.1_11_ExitAdaptiveCardNodeProperties.png)
-
-1. In the authoring canvas of the topic, you'll see the adaptive card.
-
-    ![Device request adaptive card](assets/8.1_12_DeviceRequestCard.png)
-
-1. Scroll to the bottom of the node and you'll see output variables. The `commentsId` and the `deviceSelectionId` were defined in the element properties. These two variables will store values from the card elements the users interact with. These values will be used downstream in the topic, which we'll learn about in the next lesson's lab.
-
-    ![Node variable outputs](assets/8.1_13_DeviceRequestCardOutputs.png)
-
-1. Let's next update the card from JSON to formula as we'll use Power Fx again to loop through the items returned in the **Get items** SharePoint connector action, stored in the **global variable**, `Global.VarDevices.value`, via the `value` property of the JSON response.
-
-    > We created this global variable in [Lab 07 - Add a new topic with conversation nodes, 7.3 Add a tool using a connector](../07-add-new-topic-with-trigger/README.md#73-add-a-tool-using-a-connector).
-
-    Select the card in the **Ask with Adaptive Card** node, followed by selecting the **chevron** icon and select **Formula**.
-
-    ![Change to formula](assets/8.1_14_ChangeToFormula.png)
-
-1. Click on the **expand** icon to enlarge the Formula field.
-
-    ![Click on expand icon](assets/8.1_15_SelectExpand.png)
-
-1. Click into the **Card payload editor** and select all lines using the Windows keyboard shortcut of _Ctrl + A_ or using the Mac keyboard shortcut of _Command + A_, followed by deleting the lines.
-
-    ![Click into payload card editor](assets/8.1_16_SelectAll.png)
-
-    Paste the Formula from the [Request Devices formula file](assets/8.1_RequestDeviceFormula.txt).
-
-1. In the formula, we'll loop through each SharePoint list item using the `For All` function to display the values of `Model` in the title of the choice option, and the SharePoint item `ID` is referenced as the value. We're also wrapping the values with the `If(IsBlank()` functions as the formula expects a value in order to render the adaptive card in the authoring canvas of the topic. Otherwise you'll see a message appear, "Property cannot be null"
-
-    **Close** the card modal.
-
-    ![Power Fx Formula](assets/8.1_17_PowerFxFormula.png)
-
-1. **Close** the **Adaptive Card Node properties** pane.
-
-1. **Save** the topic.
-
-    ![Save topic](assets/8.1_18_SaveTopic.png)
-
-#### 8.2 Update agent instructions to invoke Request device topic
-
 Now that we created the new topic that handles the device requests, we need to update the **agent instructions** to invoke the topic.
-
-1. Select the **Overview** tab and in the **agent instructions** select **Edit**.
-
-    ![Edit instructions](assets/8.2_01_EditInstructions.png)
-
-1. Add a new line below the previous instruction from [Lab 07 - Add a new topic with conversation nodes, 7.3 Add a tool using a connector](../07-add-new-topic-with-trigger/README.md#73-add-a-tool-using-a-connector).
-
-    ```text
-    - If the user answers yes to the question of requesting a device, trigger [Request device]. Otherwise if they answer no to the question of requesting a device, trigger [Goodbye].
-    ```
-
-    Select the entire topic placeholder in square brackets and delete the placeholder.
-
-    ![Request device placeholder](assets/8.2_02_ReplaceRequestDevicePlaceholder.png)
-
-1. Type in `/Req` and select the **Request devices** topic.
-
-    ![Request devices topic](assets/8.2_03_ReferenceRequestDeviceTopic.png)
-
-1. Repeat the same steps for the next topic placeholder, **[Goodbye]**. Select the entire topic placeholder in square brackets and delete the placeholder. Type in `/Goodbye` and select the **Goodbye** topic.
-
-    - When the user answers **Yes** to the agent asking if they would like request a device, the agent will redirect from the **Available devices** topic to the **Request devices** topic.
-
-    - Otherwise if the user answers **No**, the agent redirect from the **Available devices** topic to the **Goodbye** topic.
-
-    **Save** the updated instructions.
-
-    ![Redirect to Request device topic](assets/8.2_04_ReferenceGoodbyeTopic.png)
-
-1. Let's now test our the redirection from the _Available devices_ topic to the _Request devices_ topic. Select the **Test** to load the testing pane select **Refresh**.
-
-    Then select the **Activity map** icon in the test pane, followed by enabling **Track between topics**. This will allow us to see the _Available devices_ topic has redirected to the _Request devices_ topic.
-
-    OK, we're good to test! Enter the following in the test pane.
-
-    ```text
-    I need a laptop
-    ```
-
-    ![Test agent](assets/8.2_05_TestAgent.png)
-
-1. The agent will respond with the list of available devices followed by the question of asking the user if they would like to request a device. Copy and paste the following,
-
-    ```text
-    yes please
-    ```
-
-    ![Test Request device](assets/8.2_06_TestRequestDeviceTopic.png)
-
-1. We'll next see that the agent has redirected to the **Request device** topic. The agent invoked this topic as per the instructions we added.
-
-    The adaptive card with the interactive elements will now be displayed as message to the user.
-
-    ![Question node](assets/8.2_07_AdaptiveCardQuestion.png)
-
-1. We've now successfully tested 😄 our _Available devices_ topic redirecting to the _Request devices_ topic. We'll be adding more enhancements to this topic in the next lesson's lab.
-
-    Refresh the test pane.
-
-    ![Refresh test pane](assets/8.2_08_RefreshTestPane.png)
 
 ## ✨ Enrich your agent with AI Prompts
 
 There is a lot of content available in our agent now, but we haven't shown one of the hidden gems of Copilot Studio yet: AI Prompts!
+
+Actions can be used to extend the capabilities of agents. You can add multiple types of actions to your agents in Microsoft Copilot Studio:
+
+- **Prebuilt connector action**, which use Power Platform connectors to access data from other systems, such as popular enterprise products like Salesforce, Zendesk, MailChimp, and GitHub.
+- **Custom connector action**, where a connector can be built to access data from public or private APIs.
+- **Power Automate cloud flow**, which use Power Automate cloud flows to perform actions, retrieve and work with data.
+- **AI Builder prompts**, which use AI Builder and natural language understanding to target the specific scenarios and workflows within your business.
+- **Bot Framework skill**, which use the skill manifest that outlines the actions the skill can perform, including its input and output parameters, the skill's endpoints, and dispatch models for the skill.
+
+### Add a prompt action to a topic node
+
+In this part of the lab we’ll be creating a **prompt action** in a topic., which is the **Generate content or extract insights** action from the AI Builder connector.
+
+Prompt actions in topics help guide the agent's response in a semi-scripted conversation by using the generative AI models from AI Builder and natural language understanding to address specific scenarios for your agents.
+
+For this lab, we'll add a Topic that calls a prompt action to generate questions for a quiz.
+
+1. In your agent select the **Topics** tab, select **+ Add a topic** and select **From blank**.
+
+    ![Add topic from blank](assets/3.1_01_AddTopicFromBlank.jpg)
+
+1. Enter a **name** for the Topic such as `Generate questions for a quiz` and select the **Edit** hyperlink under _Phrases_ in the trigger. A minimum of 5 trigger phrases needs to be entered and you can enter them in bulk by pasting line-separated items and then select the **+** icon to add the phrases.
+
+    The following is an example that can be copied and pasted.
+
+    ```text
+    create a number of questions for a quiz based on a topic and format the quiz based on the instruction provided
+    creates a quiz with a number of questions based on the topic provided and formats the quiz
+    generate a quiz with a number of questions using the topic provide and format the questions
+    creates questions for a quiz on a specific topic and format
+    format a quiz by a number of questions based on the topic provided
+    ```  
+
+    ![Add trigger phrases](assets/3.1_02_TriggerPhrases.jpg)
+
+1. Select **Save** on the top right of the authoring canvas to save the Topic.
+
+    ![Save topic](assets/3.1_03_SaveTopic.jpg)
+
+1. Under the trigger node, select the **+** icon and select the **Call an action** node, followed by selecting **Create a prompt**.
+
+    ![Call an action node](assets/3.1_04_CallAnActionNode.jpg)
+
+1. The Prompt dialog will appear, and you may see a flyout appear that will guide you on how to create your prompt. Select **Next** to go through the guide.
+
+    ![Guide](assets/3.1_05_Guide.jpg)
+
+1. Let's take a moment to familiarize ourselves with the Prompt dialg. You’ll see the following:
+    - **Name** of the prompt on the top left
+    - **Prompt settings** on the right hand side which contains
+        - **Input** where the inputs parameters for the prompt can be added or deleted.
+        - **Data used (preview**) where you can use your own data from Dataverse tables in a prompt.
+        - **Output** where you define the response to be returned as text or JSON (preview).
+        - **Settings** where you define the GPT model to be used for generating responses and the temperature slider allows you to select the temperature to control the randomness of the output generated by the AI model, [learn more](https://learn.microsoft.com/ai-builder/prompt-modelsettings).
+    - **Prompt** on the top left hand side which is where you can enter your prompt. You can also start by using the suggested prompts, and test the prompt.
+    - **Prompt response** on the bottom left hand side which displays the response generated based on the prompt.
+
+    ![Prompt dialog](assets/3.1_06_PromptDialog.jpg)
+
+1. We'll create prompt that will generate questions for a quiz. Enter a name for the prompt such as `Quiz Generator`
+
+    ![Prompt name](assets/3.1_07_PromptName.jpg)
+
+1. Instead of creating a custom prompt from scratch or using a template, a prompt from the [**Power Platform Prompt Samples**](https://aka.ms/power-prompts) library can be used. In a new browser tab, navigate to [https://aka.ms/power-prompts](https://aka.ms/power-prompts) and filter to _AI Builder_ by ticking the checkbox on the left hand side.
+
+    ![Filter](assets/3.1_08_FilterSampleSolutionGallery.jpg)
+
+1. Select the [Quiz Generator Prompt](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-powerplatform-prompts-quiz-generator/). This prompt will generate a quiz based on three input parameters,
+    - number which is the number of questions
+    - topic which is the topic of the quiz
+    - format which is the output format of the questions
+
+    **Copy** the Quiz Generator prompt.
+
+    ![Quiz Generator prompt](assets/3.1_09_QuizGeneratorPrompt.jpg)
+
+1. Go back to the action in Copilot Studio. **Paste** the copied prompt value in the Prompt box on the top left hand side.
+
+    ![Paste Prompt](assets/3.1_10_PastePrompt.jpg)
+
+1. Expand the **Input** section and select **+ Add input**.
+
+    ![Add input](assets/3.1_11_AddInput.jpg)
+
+1. Enter a name for the first input of `number` and enter sample data such as `5`
+
+    ![Add number input](assets/3.1_12_AddNumberInput.jpg)
+
+1. Repeat the same for the second and third input of topic and format. Make sure you provide sample data.
+
+    ![Input parameters](assets/3.1_13_InputParameters.jpg)
+
+1. Next, the inputs needs to be inserted into the prompt. In the Prompt, highlight **[number]** and select **+ Insert** and select **number**. The input of _number_ has now been added to the prompt as an input. Repeat the same steps for the remaining inputs.
+
+    ![Insert inputs](assets/3.1_14_PromptInputParameters.jpg)
+
+1. Test the prompt before saving the custom prompt. Select **Test prompt** and a response to the prompt regarding the values provided in the sample data of the input is returned. You can also **maximize** the prompt response box to enlarge the prompt response dialog.
+
+    ![Test Prompt response](assets/3.1_15_TestPromptResponse.jpg)
+
+1. Since we're not covering Dataverse in this workshop, the **Data used (preview)** does not need to be updated in the **Prompt settings**. The **Output** can be left as the default which is Text, and the **Settings** can be left as the default.
+
+    Let's now save the prompt by selecting **Save custom prompt**
+
+    ![Save custom prompt](assets/3.1_16_SaveCustomPrompt.jpg)
+
+1. The prompt action node will now appear in the authoring canvas of the Topic. Next, the values of the input parameter need to be defined in order for the agent to populate them. This value can be
+    - a literal value
+    - an existing variable (custom, system or environment)
+    - a Power Fx formula that could also reference existing variables
+
+    Select the **>** icon
+
+    ![Input variable value](assets/3.1_17_InputParameterValue.jpg)
+
+1. Select the **System** tab and select the **Acivity.Text** as the input value for the action to use the user’s entire response and identify the format value.
+
+    ![Input Parameter Value Selected](assets/3.1_18_SelectInputParameterValue.jpg)
+
+1. Repeat the same for the remaining input parameters of the prompt action.
+
+    ![Input Parameter Values selected](assets/3.1_19_InputParameterValueSelected.jpg)
+
+1. Next, we need to define the output variable of the prompt action. This is so that the response can be referenced downstream in the topic. Select the **>** icon and in the **Custom** tab, select **Create new**
+
+    ![Create new output variable](assets/3.1_20_CreateActionOutputVariable.jpg)
+
+1. A new variable named `Var1` appears as the variable output. Select the variable and the variable properties pane will appear. Enter a variable name such as `VarQuizQuestionsResponse`
+
+    ![Prompt action variable output](assets/3.1_21_VariableOutput.jpg)
+
+1. Below the Prompt action, select the **+** icon to add a new node and select **Send a message**. Select the **{x}** variable icon.
+
+    ![Send a message node](assets/3.1_22_SendMessage.jpg)
+
+1. Select the variable **VarQuizQuestionsResponse.text**. This will add the text property of the prompt action response to the send a message node.
+
+    ![Select variable output](assets/3.1_23_VarQuizQuestionsResponse.text.jpg)
+
+1. Select **Save** to save your topic.
+
+1. The Topic details needs to be updated next which will be used by your agent to associate the topic with the user's intent when [Generative mode](https://learn.microsoft.com/microsoft-copilot-studio/advanced-generative-actions#how-does-generative-mode-work) is enabled. Select **Details** and for the **Display name** enter the following
+
+    ```text
+    generate questions for a quiz
+    ```
+
+    For the **Description** enter the following
+
+    ```text
+    This topic creates questions for a quiz based on the number of questions, the topic and format provided by the user
+    ```
+
+    ![Update Topic details](assets/3.1_24_UpdateTopicDetails.jpg)
+
+1. Select **Save** to save your topic.
+
+1. Lastly, the [Generative mode](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions#how-does-generative-mode-work) setting needs to be enabled for the agent to call the topic with the prompt action. Select **Settings** for your agent.
+
+    ![Agent settings](assets/3.1_25_Settings.jpg)
+
+1. Select the **Generative AI** setting and select **Generate (preview)** followed by selecting **Save**.
+
+    ![Enable Generative mode](assets/3.1_26_EnableGenerativeMode.jpg)
+
+1. Great, we're now ready to test the agent. In the test pane, select the **refresh** icon. Then enter the following question,
+
+    ```text
+    Create 5 questions for a quiz based on geography and format the quiz as multi choice
+    ```
+
+    ![Test prompt action](assets/3.1_27_TestPromptAction.jpg)
+
+1. A response is returned where 5 questions have been provided with the answers on the topic of geography and is formatted as multi choice questions.
+
+    ![Test prompt action response](assets/3.1_28_TestPromptActionResponse.jpg)
