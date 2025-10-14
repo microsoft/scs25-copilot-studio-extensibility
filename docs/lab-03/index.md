@@ -7,7 +7,7 @@ In this lab, you will go through the following tasks:
 * Setup authentication
 * Add operation with Parameters
 
-## Task 1: Create a solution
+## 🏗️ Create a solution
 
 Best Practice for everything in the Power Platform: Work INSIDE solutions. They are great for organizing your customizations and some features only work here plus they over ALM capabilities.
 
@@ -23,7 +23,7 @@ Sidenote: Using the Default Publisher is not considered best practice because yo
 
 Congrats you have a solution for doing our Custom Connector development! Every journey starts with the first step 💪
 
-## Task 2: Create a connector from blank
+## 🔗 Create a connector from blank
 
 As we learned before there are multiple ways to create a Custom Connector, we will use the most basic one to learn the basics 🙂
 
@@ -45,7 +45,7 @@ Next you need to select **HTTPS** and fill in the **Host** and **Base URL**. The
 
 !["Adding Host and Base URL"](./assets/lab03_02_hosturl.png)
 
-## Task 3: Define Security / Authentication
+## 🔐 Define Security / Authentication
 
 Click on **Security** on the bottom or in the wizard status on top to move on to the next step. Authentication describes how the Custom Connector will authenticate with the API and the options to choose from depends on the used API.
 
@@ -67,7 +67,7 @@ The Nordic Summit Event API will be authenticated by an API Key in the Header of
 
 All done! Very important: **You do not need to enter any API Key in this step!** Authentication info is never stored directly in a Custom Connector but only ever in Connections. They will get created later when we are actually are using our Custom Connector.
 
-## Task 4: Create first simple definition
+## ⚡ Create first simple definition
 
 Click on **Definition** to get to the next step of creating a Custom Connector, the stage where we define the actual actions which are possible to execute for this Custom Connector.
 
@@ -164,7 +164,7 @@ Also remember to **Update Connector** to publish your changes!
 
 !["Update Connector"](./assets/lab03_02_updateconnector.png)
 
-## Task 5: Create an operation with parameter
+## 🎯 Create an operation with parameter
 
 Let's get into the more interesting stuff, let's make more dynamic operations. You saw that the GET/Events action only returned one event because the environment has this global filter, so let's check out the connected records. For this we will add **Tracks** and **Sessions** with the goal of getting only session of a certain track.
 
