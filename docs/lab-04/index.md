@@ -1,12 +1,16 @@
 # Lab 04: Setup an MCP Server locally and add it to Microsoft Copilot Studio
 
-In this part, you will learn about how to run a Model Context Protocol (MCP) server and how to connect it to Microsoft Copilot Studio. Zava has created an MCP server for inventory management that provides tools for managing products (like get_products and add_product), stores (such as get_stores and add_store), and inventory operations (including list_inventory_by_store). The MCP server is available on **D:\LabFiles\ZavaInventoryMCP**.
+In this part, you will learn about how to run a Model Context Protocol (MCP) server and how to connect it to Microsoft Copilot Studio. Zava has created an MCP server for inventory management that provides tools for managing products (like get_products and add_product), stores (such as get_stores and add_store), and inventory operations (including list_inventory_by_store).
+
+The MCP server is available via the following link: [download MCP server](https://raw.githubusercontent.com/microsoft/scs25-copilot-studio-extensibility/refs/heads/main/src/ZavaInventoryMCP.zip)
+
+Make sure to unpack the folder on your machine and copy the folder to the C-drive, so that you have the MCP server available here: **C:\ZavaInventoryMCP**.
 
 ## Open the MCP Server in Visual Studio Code
 
 1. Open Visual Studio Code by selecting Visual Studio Code in the taskbar
 1. Select **File > Open Folder**
-1. Navigate to **D:\LabFiles\ZavaInventoryMCP**
+1. Navigate to **C:\ZavaInventoryMCP**
 1. Select **Select Folder**
 1. You might see a pop up where you will be asked to trust the authors of the files in this folder. Make sure to select **Yes, I trust the authors**
 
@@ -40,7 +44,7 @@ Make sure to look around in these files to see what's going on in the server. No
 ## Install dependencies
 
 1. Open the terminal by selecting **Terminal > New Terminal**
-1. Make sure you are in the following folder: **D:\LabFiles\ZavaInventoryMCP**
+1. Make sure you are in the following folder: **C:\ZavaInventoryMCP**
 1. Create a new virtual environment by running the following command (press **Enter** after pasting in the terminal to run it):
 
     ```bash
