@@ -30,7 +30,7 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
 1. In your agent select the **Topics** tab, select **+ Add a topic** and select **From blank**.
 
-    ![Add topic from blank](assets/3.1_01_AddTopicFromBlank.jpg)
+    ![Add topic from blank](./assets/Lab2_4_1_01_AddTopicFromBlank.jpg)
 
 1. Enter a **name** for the Topic such as `Generate questions for a quiz` and select the **Edit** hyperlink under _Phrases_ in the trigger. A minimum of 5 trigger phrases needs to be entered and you can enter them in bulk by pasting line-separated items and then select the **+** icon to add the phrases.
 
@@ -44,19 +44,19 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
     format a quiz by a number of questions based on the topic provided
     ```  
 
-    ![Add trigger phrases](assets/3.1_02_TriggerPhrases.jpg)
+    ![Add trigger phrases](./assets/Lab2_4_1_02_TriggerPhrases.jpg)
 
 1. Select **Save** on the top right of the authoring canvas to save the Topic.
 
-    ![Save topic](assets/3.1_03_SaveTopic.jpg)
+    ![Save topic](./assets/Lab2_4_1_03_SaveTopic.jpg)
 
 1. Under the trigger node, select the **+** icon and select the **Call an action** node, followed by selecting **Create a prompt**.
 
-    ![Call an action node](assets/3.1_04_CallAnActionNode.jpg)
+    ![Call an action node](./assets/Lab2_4_1_04_CallAnActionNode.jpg)
 
 1. The Prompt dialog will appear, and you may see a flyout appear that will guide you on how to create your prompt. Select **Next** to go through the guide.
 
-    ![Guide](assets/3.1_05_Guide.jpg)
+    ![Guide](./assets/Lab2_4_1_05_Guide.jpg)
 
 1. Let's take a moment to familiarize ourselves with the Prompt dialg. You’ll see the following:
     - **Name** of the prompt on the top left
@@ -68,15 +68,15 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
     - **Prompt** on the top left hand side which is where you can enter your prompt. You can also start by using the suggested prompts, and test the prompt.
     - **Prompt response** on the bottom left hand side which displays the response generated based on the prompt.
 
-    ![Prompt dialog](assets/3.1_06_PromptDialog.jpg)
+    ![Prompt dialog](./assets/Lab2_4_1_06_PromptDialog.jpg)
 
 1. We'll create prompt that will generate questions for a quiz. Enter a name for the prompt such as `Quiz Generator`
 
-    ![Prompt name](assets/3.1_07_PromptName.jpg)
+    ![Prompt name](./assets/Lab2_4_1_07_PromptName.jpg)
 
 1. Instead of creating a custom prompt from scratch or using a template, a prompt from the [**Power Platform Prompt Samples**](https://aka.ms/power-prompts) library can be used. In a new browser tab, navigate to [https://aka.ms/power-prompts](https://aka.ms/power-prompts) and filter to _AI Builder_ by ticking the checkbox on the left hand side.
 
-    ![Filter](assets/3.1_08_FilterSampleSolutionGallery.jpg)
+    ![Filter](./assets/Lab2_4_1_08_FilterSampleSolutionGallery.jpg)
 
 1. Select the [Quiz Generator Prompt](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-powerplatform-prompts-quiz-generator/). This prompt will generate a quiz based on three input parameters,
     - number which is the number of questions
@@ -85,37 +85,37 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
     **Copy** the Quiz Generator prompt.
 
-    ![Quiz Generator prompt](assets/3.1_09_QuizGeneratorPrompt.jpg)
+    ![Quiz Generator prompt](./assets/Lab2_4_1_09_QuizGeneratorPrompt.jpg)
 
 1. Go back to the action in Copilot Studio. **Paste** the copied prompt value in the Prompt box on the top left hand side.
 
-    ![Paste Prompt](assets/3.1_10_PastePrompt.jpg)
+    ![Paste Prompt](./assets/Lab2_4_1_10_PastePrompt.jpg)
 
 1. Expand the **Input** section and select **+ Add input**.
 
-    ![Add input](assets/3.1_11_AddInput.jpg)
+    ![Add input](./assets/Lab2_4_1_11_AddInput.jpg)
 
 1. Enter a name for the first input of `number` and enter sample data such as `5`
 
-    ![Add number input](assets/3.1_12_AddNumberInput.jpg)
+    ![Add number input](./assets/Lab2_4_1_12_AddNumberInput.jpg)
 
 1. Repeat the same for the second and third input of topic and format. Make sure you provide sample data.
 
-    ![Input parameters](assets/3.1_13_InputParameters.jpg)
+    ![Input parameters](./assets/Lab2_4_1_13_InputParameters.jpg)
 
 1. Next, the inputs needs to be inserted into the prompt. In the Prompt, highlight **[number]** and select **+ Insert** and select **number**. The input of _number_ has now been added to the prompt as an input. Repeat the same steps for the remaining inputs.
 
-    ![Insert inputs](assets/3.1_14_PromptInputParameters.jpg)
+    ![Insert inputs](./assets/Lab2_4_1_14_PromptInputParameters.jpg)
 
 1. Test the prompt before saving the custom prompt. Select **Test prompt** and a response to the prompt regarding the values provided in the sample data of the input is returned. You can also **maximize** the prompt response box to enlarge the prompt response dialog.
 
-    ![Test Prompt response](assets/3.1_15_TestPromptResponse.jpg)
+    ![Test Prompt response](./assets/Lab2_4_1_15_TestPromptResponse.jpg)
 
 1. Since we're not covering Dataverse in this workshop, the **Data used (preview)** does not need to be updated in the **Prompt settings**. The **Output** can be left as the default which is Text, and the **Settings** can be left as the default.
 
     Let's now save the prompt by selecting **Save custom prompt**
 
-    ![Save custom prompt](assets/3.1_16_SaveCustomPrompt.jpg)
+    ![Save custom prompt](./assets/Lab2_4_1_16_SaveCustomPrompt.jpg)
 
 1. The prompt action node will now appear in the authoring canvas of the Topic. Next, the values of the input parameter need to be defined in order for the agent to populate them. This value can be
     - a literal value
@@ -124,31 +124,31 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
     Select the **>** icon
 
-    ![Input variable value](assets/3.1_17_InputParameterValue.jpg)
+    ![Input variable value](./assets/Lab2_4_1_17_InputParameterValue.jpg)
 
 1. Select the **System** tab and select the **Acivity.Text** as the input value for the action to use the user’s entire response and identify the format value.
 
-    ![Input Parameter Value Selected](assets/3.1_18_SelectInputParameterValue.jpg)
+    ![Input Parameter Value Selected](./assets/Lab2_4_1_18_SelectInputParameterValue.jpg)
 
 1. Repeat the same for the remaining input parameters of the prompt action.
 
-    ![Input Parameter Values selected](assets/3.1_19_InputParameterValueSelected.jpg)
+    ![Input Parameter Values selected](./assets/Lab2_4_1_19_InputParameterValueSelected.jpg)
 
 1. Next, we need to define the output variable of the prompt action. This is so that the response can be referenced downstream in the topic. Select the **>** icon and in the **Custom** tab, select **Create new**
 
-    ![Create new output variable](assets/3.1_20_CreateActionOutputVariable.jpg)
+    ![Create new output variable](./assets/Lab2_4_1_20_CreateActionOutputVariable.jpg)
 
 1. A new variable named `Var1` appears as the variable output. Select the variable and the variable properties pane will appear. Enter a variable name such as `VarQuizQuestionsResponse`
 
-    ![Prompt action variable output](assets/3.1_21_VariableOutput.jpg)
+    ![Prompt action variable output](./assets/Lab2_4_1_21_VariableOutput.jpg)
 
 1. Below the Prompt action, select the **+** icon to add a new node and select **Send a message**. Select the **{x}** variable icon.
 
-    ![Send a message node](assets/3.1_22_SendMessage.jpg)
+    ![Send a message node](./assets/Lab2_4_1_22_SendMessage.jpg)
 
 1. Select the variable **VarQuizQuestionsResponse.text**. This will add the text property of the prompt action response to the send a message node.
 
-    ![Select variable output](assets/3.1_23_VarQuizQuestionsResponse.text.jpg)
+    ![Select variable output](./assets/Lab2_4_1_23_VarQuizQuestionsResponse.text.jpg)
 
 1. Select **Save** to save your topic.
 
@@ -164,17 +164,17 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
     This topic creates questions for a quiz based on the number of questions, the topic and format provided by the user
     ```
 
-    ![Update Topic details](assets/3.1_24_UpdateTopicDetails.jpg)
+    ![Update Topic details](./assets/Lab2_4_1_24_UpdateTopicDetails.jpg)
 
 1. Select **Save** to save your topic.
 
 1. Lastly, the [Generative mode](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions#how-does-generative-mode-work) setting needs to be enabled for the agent to call the topic with the prompt action. Select **Settings** for your agent.
 
-    ![Agent settings](assets/3.1_25_Settings.jpg)
+    ![Agent settings](./assets/Lab2_4_1_25_Settings.jpg)
 
 1. Select the **Generative AI** setting and select **Generate (preview)** followed by selecting **Save**.
 
-    ![Enable Generative mode](assets/3.1_26_EnableGenerativeMode.jpg)
+    ![Enable Generative mode](./assets/Lab2_4_1_26_EnableGenerativeMode.jpg)
 
 1. Great, we're now ready to test the agent. In the test pane, select the **refresh** icon. Then enter the following question,
 
@@ -182,8 +182,8 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
     Create 5 questions for a quiz based on geography and format the quiz as multi choice
     ```
 
-    ![Test prompt action](assets/3.1_27_TestPromptAction.jpg)
+    ![Test prompt action](./assets/Lab2_4_1_27_TestPromptAction.jpg)
 
 1. A response is returned where 5 questions have been provided with the answers on the topic of geography and is formatted as multi choice questions.
 
-    ![Test prompt action response](assets/3.1_28_TestPromptActionResponse.jpg)
+    ![Test prompt action response](./assets/Lab2_4_1_28_TestPromptActionResponse.jpg)
