@@ -11,7 +11,7 @@ In this lab, you will go through the following tasks:
 
 Best Practice for everything in the Power Platform: Work INSIDE solutions. They are great for organizing your customizations and some features only work here plus they over ALM capabilities.
 
-Because of that our first step withing **make.powerautomate.com** is to navigate to **Solutions** on the left hand side and click on **New Solution**
+Because of that our first step within **[make.powerautomate.com](https://make.powerautomate.com)** is to navigate to **Solutions** on the left hand side and click on **New Solution**
 
 !["Create new solution"](./assets/lab03_conblank_01_createsolution.png)
 
