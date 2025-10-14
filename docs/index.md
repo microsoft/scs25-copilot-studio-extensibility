@@ -88,14 +88,6 @@ By the end of this workshop, you will have:
 | **Lab 03** | Build Connector | [Go to Lab 03](./lab-03/index.md) |
 | **Lab 04** | Model Context Protocol | [Go to Lab 04](./lab-04/index.md) |
 
-## 🔗 Useful Links
-
-- [Copilot Studio Documentation](https://docs.microsoft.com/copilot-studio/)
-- [Power Platform Connectors](https://docs.microsoft.com/connectors/)
-- [South Coast Summit Website](https://southcoastsummit.com/)
-
 ---
 
 **Ready to extend Copilot Studio?** We can't wait to see what you'll build! 🎉
-
-For the latest updates and announcements, follow the workshop hashtag: **#SCS2025CopilotStudio**
