@@ -90,17 +90,7 @@ In the terminal at the bottom of Visual Studio Code, we are going to configure a
     ```
 
 1. In the pop-up that will appear, select **Work or School account** and select **Continue**
-1. Log in with:
-
-    <!-- markdownlint-disable-next-line MD034 -->
-    **Username:** +++@lab.CloudCredential(CSBatch1).Username+++
-
-    <!-- markdownlint-disable-next-line MD034 -->
-    **Password:** +++@lab.CloudCredential(CSBatch1).Password+++
-
-    <!-- markdownlint-disable-next-line MD034 -->
-    **Temporary Access Password:** +++@lab.Variable(TAP)+++
-
+1. Log in with the account we gave you before
 1. In the next screen where it asks if you want to automatically sign into all desktop apps on this device, select **No, this app only**
 
     ![Sign In Apps](./assets/SignInApps.png)
@@ -198,7 +188,7 @@ We are going to fix this error in the next steps.
 1. Enter the **API Key**:
 
       ```text
-    AITour2026!
+    SCS2025!
       ```
 
 1. Select **Create**
@@ -251,13 +241,13 @@ We are going to fix this error in the next steps.
 
     ```text
     Please add the following Zava Store:
-    Zava Chicago
-    1597 Virginia Street, Chicago, Illinois, IL 60618
+    Zava Farnborough
+    42 High Street, Farnborough, Hampshire, GU14 1BJ
     ```
 
     ![Add Zava store via message](./assets/AddZavaStore.png)
 
-    As you can see, we didn't add United States to the message, but it automatically added that based on the details in the message.
+    As you can see, we didn't add United Kingdom to the message, but it automatically added that based on the details in the message.
 
     ![Add Zava store activity map](./assets/AddZavaStoreActivityMap.png)
 
