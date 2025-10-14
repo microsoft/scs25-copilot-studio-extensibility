@@ -98,10 +98,6 @@ It's always good to have a separate browser profile for your work and for worksh
 
    ![Add new browser profile](./assets/add-new-browser-profile.png)
 
-1. Click **Add**
-
-   ![Add a profile dialog](./assets/add-profile.png)
-
    This will then open up a new browser window on your taskbar.
 
 1. Pin that browser window to your taskbar
