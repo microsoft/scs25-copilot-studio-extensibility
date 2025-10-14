@@ -19,7 +19,8 @@ In the dialog which open give your solution a meaningful name and select either 
 
 !["Create Solution Dialog"](./assets/lab03_conblank_02_solutionwizard.png)
 
-Sidenote: Using the Default Publisher is not considered best practice because you have no control about the technical prefix all your components will receive.
+> [!NOTE]
+> Using the Default Publisher is not considered best practice because you have no control about the technical prefix all your components will receive.
 
 Congrats you have a solution for doing our Custom Connector development! Every journey starts with the first step 💪
 
