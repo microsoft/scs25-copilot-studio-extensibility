@@ -6,4 +6,6 @@
 
 Welcome to the **Copilot Studio Extensibility Workshop** at South Coast Summit 2025! 🚀
 
-## Go to the workshop by going to [the website](https://aka.ms/scs25-copilot-studio)
+## The workshop
+
+Go to the workshop by going to [the website](https://aka.ms/scs25-copilot-studio)
