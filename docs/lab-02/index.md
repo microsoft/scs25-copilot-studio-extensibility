@@ -1,5 +1,12 @@
 # Lab 02 - Build an agent with Copilot Studio
 
+In this lab, you will go through the following tasks:
+
+- Add Dataverse as a knowledge source
+- Add a website as a knowledge source
+- Use adaptive cards to make your agent look nicer
+- Enrich your agent with AI Prompts
+
 ## 📊 Add Dataverse as a knowledge source - Dataverse entity suppliers / data excel file (Mats)
 
 ## 🌐 Add a website as a knowledge source - Microsoft Learn (Mats)
@@ -168,7 +175,7 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
 1. Select **Save** to save your topic.
 
-1. Lastly, the [Generative mode](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions#how-does-generative-mode-work) setting needs to be enabled for the agent to call the topic with the prompt action. Select **Settings** for your agent.
+1. Lastly, the [Generative mode](https://learn.microsoft.com/microsoft-copilot-studio/advanced-generative-actions#how-does-generative-mode-work) setting needs to be enabled for the agent to call the topic with the prompt action. Select **Settings** for your agent.
 
     ![Agent settings](./assets/Lab2_4_1_25_Settings.jpg)
 
