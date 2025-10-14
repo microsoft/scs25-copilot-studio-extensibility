@@ -20,9 +20,10 @@ This page contains helpful links and resources for the Copilot Studio Extensibil
 
 ### Learning Resources
 
+- ✨ [Copilot Studio - Agent Academy](https://aka.ms/agent-academy)
 - [Copilot Studio Learning Path](https://learn.microsoft.com/training/paths/work-power-virtual-agents/) - Microsoft Learn modules
-- [Copilot Studio Community](https://powerusers.microsoft.com/t5/Microsoft-Copilot-Studio/ct-p/PVACommunity) - Ask questions and share ideas
-- [Copilot Studio Blog](https://powervirtualagents.microsoft.com/blog/) - Latest news and updates
+- [Copilot Studio Community](https://community.powerplatform.com/forums/thread/?groupid=db8f53c2-767d-47d6-a1ae-fe4c828a6553) - Ask questions and share ideas
+- [Copilot Studio Blog](https://www.microsoft.com/microsoft-copilot/blog/copilot-studio) - Latest news and updates
 
 ## 🔌 Custom Connectors
 
@@ -31,16 +32,17 @@ This page contains helpful links and resources for the Copilot Studio Extensibil
 - [Power Platform Connectors](https://learn.microsoft.com/connectors/) - Overview of connectors
 - [Custom Connectors Overview](https://learn.microsoft.com/connectors/custom-connectors/) - Build your own connectors
 - [Create a custom connector from scratch](https://learn.microsoft.com/connectors/custom-connectors/define-blank) - Step-by-step guide
-- [Use a custom connector from Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/advanced-use-custom-connector) - Integration guide
+- [Create a custom connector with an OpenAPI extension](https://learn.microsoft.com/connectors/custom-connectors/openapi-extensions) - Advanced connector customization
 
 ### OpenAPI & API Documentation
 
-- [OpenAPI Specification](https://swagger.io/specification/) - Standard for REST API documentation
 - [Postman](https://www.postman.com/) - API development and testing tool
 - [Swagger Editor](https://editor.swagger.io/) - Design and document APIs
 
 ## 🧠 Model Context Protocol (MCP)
 
+- [Copilot Studio ❤️ MCP](https://aka.ms/mcsmcp/lab) - Copilot Studio & MCP Lab
+- [Copilot Studio MCP Servers](https://aka.ms/copilot-studio-mcp) - Example servers that work with Copilot Studio
 - [Model Context Protocol Documentation](https://modelcontextprotocol.io/) - Official MCP documentation
 - [MCP GitHub Repository](https://github.com/modelcontextprotocol) - Open source MCP resources
 - [Building MCP Servers](https://modelcontextprotocol.io/docs/concepts/servers) - Server development guide
