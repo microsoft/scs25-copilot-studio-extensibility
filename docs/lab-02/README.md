@@ -133,7 +133,7 @@ By the end of this lab, your agent should:
 
 ## Next Steps
 
-Continue to [Lab 02: Build Connector and Add Action](../Lab-03/README.md)
+Continue to [Lab 02: Build Connector and Add Action](../lab-03/README.md)
 
 ---
 *Your agent is now ready for advanced extensibility! Next, we'll add custom connector capabilities.*
