@@ -2,7 +2,7 @@
 
 Before we can get started with the other labs, we need to make sure we have everything installed. The following prerequisites are needed to ensure a successful workshop.
 
-## Prerequisites
+## ✅ Prerequisites
 
 This lab requires several tools and resources to be installed on your local development environment. Each tool serves a specific purpose in the Copilot Studio extensibility workflow:
 
@@ -14,7 +14,7 @@ This lab requires several tools and resources to be installed on your local deve
 
 **Note:** If you already have any of these tools installed on your machine, you can skip their installation and proceed to the next tool. Make sure your existing installations are up to date.
 
-## Installing Required Resources
+## 💻 Installing Required Resources
 
 ### Microsoft Edge
 
@@ -84,11 +84,11 @@ To install DevTunnels CLI:
     devtunnel --version
     ```
 
-## Log into the lab environment
+## 🔐 Log into the lab environment
 
 For this workshop - we will hand out accounts which you can use. This account is already prepped for us and will have an environment for you on which you can run these labs.
 
-### Task 1: Create a new browser profile (Microsoft Edge)
+### Create a new browser profile (Microsoft Edge)
 
 It's always good to have a separate browser profile for your work and for workshops like this. This way you can keep all of your credentials separate and not have to worry about logging out of your personal / work accounts.
 
@@ -111,7 +111,7 @@ It's always good to have a separate browser profile for your work and for worksh
 
    It may prompt you to configure your new browser theme. If this happens, just select **Next** and then **Finish**.
 
-### Task 2: Log on to your account
+### Log on to your account
 
 With the credentials that were provided to you, let's log into the account you are going to use during the workshop.
 
