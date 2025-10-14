@@ -8,10 +8,6 @@
 
 Now lets make sure the users of our agent can ask for content - and lets use a different option here. Instead of using knowledge, we will create a topic with an adaptive card. The adaptive card will be used to make sure not only text is shown, but also a bit of design is shown.
 
-We're now going to learn how to enhance our topic with adaptive cards and using advanced functionality of topics and nodes.
-
-Now that we created the new topic that handles the device requests, we need to update the **agent instructions** to invoke the topic.
-
 ## ✨ Enrich your agent with AI Prompts
 
 There is a lot of content available in our agent now, but we haven't shown one of the hidden gems of Copilot Studio yet: AI Prompts!
