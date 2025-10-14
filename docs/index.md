@@ -81,33 +81,17 @@ By the end of this workshop, you will have:
 
 ## 📚 Workshop Materials
 
-All workshop materials, code samples, and exercises will be available in this repository. Make sure to:
+All workshop materials, code samples, and labs will be available in this repository. Make sure to:
 
 1. **Clone this repository** before the workshop
 1. **Check for updates** the day before the event
-1. **Follow the setup guides** in each exercise folder
-
-## 🤝 Code of Conduct
-
-This workshop follows the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-## 📞 Support & Questions
-
-If you have questions before or during the workshop:
-
-- **Pre-workshop setup:** Create an issue in this repository
-- **Day of workshop:** Ask instructors or workshop assistants
-- **General inquiries:** Contact South Coast Summit organizers
+1. **Follow the setup guides** in each lab folder
 
 ## 🔗 Useful Links
 
 - [Copilot Studio Documentation](https://docs.microsoft.com/copilot-studio/)
 - [Power Platform Connectors](https://docs.microsoft.com/connectors/)
 - [South Coast Summit Website](https://southcoastsummit.com/)
-
-## 📄 License
-
-This project is licensed under the MIT License.
 
 ---
 
