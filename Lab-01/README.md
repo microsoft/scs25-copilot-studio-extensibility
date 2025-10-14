@@ -1,1 +1,135 @@
-# Lab 01: Setup your machine for the labs
+# Lab 01: Setup
+
+Before we can get started with the other labs, we need to make sure we have everything installed. The following prerequisites are needed to ensure a successful workshop.
+
+## Prerequisites
+
+This lab requires several tools and resources to be installed on your local development environment. Each tool serves a specific purpose in the Copilot Studio extensibility workflow:
+
+- **Microsoft Edge**: Browser for testing and accessing Copilot Studio
+- **Python (LTS)**: Runtime environment for building custom connectors and extensions
+- **VS Code**: Primary code editor for development work
+- **Git for Windows**: Version control for managing your code
+- **DevTunnels**: Tool for creating secure tunnels to expose local services for testing
+
+**Note:** If you already have any of these tools installed on your machine, you can skip their installation and proceed to the next tool. Make sure your existing installations are up to date.
+
+## Installing Required Resources
+
+### Microsoft Edge
+
+Microsoft Edge comes pre-installed on Windows 10 and 11. If you need to install or update it:
+
+- Download from [microsoft.com/edge](https://www.microsoft.com/edge)
+- Run the installer and follow the prompts
+- Edge will auto-update in the background
+
+### Python (LTS)
+
+To install Python Long-Term Support version:
+
+1. Visit [python.org/downloads](https://www.python.org/downloads/)
+1. Download the latest stable version (currently Python 3.12.x is recommended)
+1. Run the installer and **check "Add Python to PATH"**
+1. Verify installation in PowerShell:
+
+   ```powershell
+   python --version
+   ```
+
+### VS Code
+
+To install Visual Studio Code:
+
+1. Download from [code.visualstudio.com](https://code.visualstudio.com/)
+1. Run the installer
+1. Recommended: Check "Add to PATH" during installation
+1. Verify installation:
+
+   ```powershell
+   code --version
+   ```
+
+### Git for Windows
+
+To install Git:
+
+1. Download from [git-scm.com/download/win](https://git-scm.com/download/win)
+1. Run the installer with these recommended settings:
+   - Use Git from the command line and 3rd-party software
+   - Use bundled OpenSSH
+   - Use OpenSSL library
+   - Checkout Windows-style, commit Unix-style line endings
+1. Verify installation:
+
+   ```powershell
+   git --version
+   ```
+
+### DevTunnels
+
+To install DevTunnels CLI:
+
+1. Download from [aka.ms/devtunnels/download](https://aka.ms/devtunnels/download)
+1. Alternatively, install via winget:
+
+       ```powershell
+       winget install Microsoft.devtunnel
+       ```
+
+1. Or download manually and add to PATH
+1. Verify installation:
+
+    ```powershell
+    devtunnel --version
+    ```
+
+## Log into the lab environment
+
+For this workshop - we will hand out accounts which you can use. This account is already prepped for us and will have an environment for you on which you can run these labs.
+
+### Task 1: Create a new browser profile (Microsoft Edge)
+
+It's always good to have a separate browser profile for your work and for workshops like this. This way you can keep all of your credentials separate and not have to worry about logging out of your personal / work accounts.
+
+1. Open Microsoft Edge
+1. Click on the profile icon on the top left corner
+1. Hover over "Other Microsoft Edge Browsers" / "Other profiles" and then select **Add Browser** / **Add profile**
+
+   ![Add new browser profile](./assets/add-new-browser-profile.png)
+
+1. Click **Add**
+
+   ![Add a profile dialog](./assets/add-profile.png)
+
+   This will then open up a new browser window on your taskbar.
+
+1. Pin that browser window to your taskbar
+1. In the new browser window, select **Start without your data**
+
+   ![Start without your data](./assets/start-without-your-data.png)
+
+1. Then select **Confirm and start browsing**.
+
+   ![Confirm and start browsing](./assets/confirm-and-start-browsing.png)
+
+   It may prompt you to configure your new browser theme. If this happens, just select **Next** and then **Finish**.
+
+### Task 2: Log on to your account
+
+With the credentials that were provided to you, let's log into the account you are going to use during the workshop.
+
+1. Go to [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com)
+1. On the sign-in screen, enter the email address that was provided to you and then click **Next**
+
+   ![Sign in screen](./assets/pa-sign-in-email.png)
+
+1. Then enter the password and click **Sign in**
+
+   ![Sign in screen](./assets/pa-sign-in-password.png)
+
+1. If you're prompted to stay signed in, click **Yes**
+
+   You should now be logged in and on the Power Apps Home Page.
+
+   ![Power apps home page](./assets/power-automate-home-page.png)
