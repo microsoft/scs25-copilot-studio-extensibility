@@ -96,18 +96,9 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
     ![Save custom prompt](./assets/Lab2_4_1_13_Save.png)
 
-1. The prompt action node will now appear in the authoring canvas of the Topic. Next, the values of the input parameter need to be defined in order for the agent to populate them. This value can be
-    - a literal value
-    - an existing variable (custom, system or environment)
-    - a Power Fx formula that could also reference existing variables
+1. The prompt action node will now appear in the authoring canvas of the Topic. The same three inputs we saw in the instructions in the Prompt Builder are available here: topic, format and number.
 
-    Select the **>** icon
-
-    ![Input variable value](./assets/Lab2_4_1_17_InputParameterValue.jpg)
-
-1. Select the **System** tab and select the **Acivity.Text** as the input value for the action to use the user’s entire response and identify the format value.
-
-    ![Input Parameter Value Selected](./assets/Lab2_4_1_18_SelectInputParameterValue.jpg)
+    ![Input variable value](./assets/Lab2_4_1_14_InputParameters.png)
 
 1. Repeat the same for the remaining input parameters of the prompt action.
 
