@@ -27,9 +27,9 @@ Tools can be used to extend the capabilities of agents. You can add multiple typ
 - **AI Builder prompts**, which use AI Builder and natural language understanding to target the specific scenarios and workflows within your business.
 - **Bot Framework skill**, which use the skill manifest that outlines the actions the skill can perform, including its input and output parameters, the skill's endpoints, and dispatch models for the skill.
 
-### Add a prompt action to a topic node
+### Add an AI prompt to a topic
 
-In this part of the lab we’ll be creating a **prompt action** in a topic, which is the **Generate content or extract insights** action from the AI Builder connector.
+In this part of the lab we’ll be creating a **AI prompt** in a topic.
 
 Prompt tools in topics help guide the agent's response in a semi-scripted conversation by using the generative AI models from AI Builder and natural language understanding to address specific scenarios for your agents.
 
@@ -37,25 +37,19 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
 1. In your agent select the **Topics** tab, select **+ Add a topic** and select **From blank**.
 
-    ![Add topic from blank](./assets/Lab2_4_1_01_AddTopicFromBlank.jpg)
+    ![Add topic from blank](./assets/Lab2_4_1_01_AddTopicFromBlank.png)
 
-1. Enter a **name** for the Topic such as `Generate questions for a quiz` and select the **Edit** hyperlink under _Phrases_ in the trigger. A minimum of 5 trigger phrases needs to be entered and you can enter them in bulk by pasting line-separated items and then select the **+** icon to add the phrases.
-
-    The following is an example that can be copied and pasted.
+1. Enter a **name** for the Topic such as `Generate questions for a quiz` and enter the text below under **Describe what the topic does**
 
     ```text
-    create a number of questions for a quiz based on a topic and format the quiz based on the instruction provided
-    creates a quiz with a number of questions based on the topic provided and formats the quiz
-    generate a quiz with a number of questions using the topic provide and format the questions
-    creates questions for a quiz on a specific topic and format
-    format a quiz by a number of questions based on the topic provided
+    This topic covers creating interactive quizzes based on a chosen subject. It generates a set number of questions and formats them according to given instructions. The goal is to produce well-structured, engaging quizzes that match the topic and layout preferences.
     ```  
 
-    ![Add trigger phrases](./assets/Lab2_4_1_02_TriggerPhrases.jpg)
+    ![Add topic description](./assets/Lab2_4_1_02_TopicDescription.png)
 
 1. Select **Save** on the top right of the authoring canvas to save the Topic.
 
-    ![Save topic](./assets/Lab2_4_1_03_SaveTopic.jpg)
+    ![Save topic](./assets/Lab2_4_1_03_SaveTopic.png)
 
 1. Under the trigger node, select the **+** icon and select the **Call an action** node, followed by selecting **Create a prompt**.
 
