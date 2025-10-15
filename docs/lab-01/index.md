@@ -128,3 +128,11 @@ With the credentials that were provided to you, let's log into the account you a
 1. Select **...** on the top-right corner next to the _Create_ button and then select **Cancel agent creation**
 
     ![Cancel agent creation](./assets/cancel-agent-creation.png)
+
+1. Select **Yes, continue**
+
+    This will forward you to the Copilot Studio homepage.
+
+    ![Copilot Studio Homepage](./assets/copilot-studio-homepage.png)
+
+This is it for the first module! Piece of cake, right? 😊
