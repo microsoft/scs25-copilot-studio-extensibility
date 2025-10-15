@@ -102,16 +102,29 @@ It's always good to have a separate browser profile for your work and for worksh
 With the credentials that were provided to you, let's log into the account you are going to use during the workshop.
 
 1. Go to [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com)
-1. On the sign-in screen, enter the email address that was provided to you and then click **Next**
+1. On the sign-in screen, enter the email address that has been provided to you and then click **Next**
 
-   ![Sign in screen](./assets/pa-sign-in-email.png)
+   ![Sign in screen](./assets/sign-in-email.png)
 
-1. Then enter the password and click **Sign in**
+1. Then enter the Temporary Access Pass that has been provided to you and click **Sign in**
 
-   ![Sign in screen](./assets/pa-sign-in-password.png)
+   ![Sign in screen](./assets/sign-in-password.png)
 
 1. If you're prompted to stay signed in, click **Yes**
+1. Select **Yes** when being asked if you want to be signed in
 
-   You should now be logged in and on the Power Apps Home Page.
+    This will trigger the creation of your developer environment. The following loading screen will show:
 
-   ![Power apps home page](./assets/power-automate-home-page.png)
+    ![Loading developer environment creation](./assets/developer-environment.png)
+
+1. When that's done, select **Get Started**
+
+    ![Get Started](./assets/get-started.png)
+
+1. In the _Welcome to Copilot Studio_ screen select **Skip**
+
+    ![Skip](./assets/skip-welcome.png)
+
+1. Select **...** on the top-right corner next to the _Create_ button and then select **Cancel agent creation**
+
+    ![Cancel agent creation](./assets/cancel-agent-creation.png)
