@@ -64,9 +64,9 @@ To install DevTunnels CLI:
 1. Download from [aka.ms/devtunnels/download](https://aka.ms/devtunnels/download)
 1. Alternatively, install via winget:
 
-       ```powershell
-       winget install Microsoft.devtunnel
-       ```
+   ```powershell
+   winget install Microsoft.devtunnel
+   ```
 
 1. Or download manually and add to PATH
 
