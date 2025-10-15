@@ -80,33 +80,21 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
     ![Paste Prompt](./assets/Lab2_4_1_09_PromptLibraryQuiz.png)
 
     > [!NOTE]
-    > Notice that...
+    > Notice that the prompt automatically gets added to the instructions. It even includes inputs.
 
-1. Expand the **Input** section and select **+ Add input**.
+    ![Selected prompt template](./assets/Lab2_4_1_10_PromptInstructions.png)
 
-    ![Add input](./assets/Lab2_4_1_11_AddInput.jpg)
+1. Select the **topic** input and change the value of the sample data from _Art_ to **Power Platform**
 
-1. Enter a name for the first input of `number` and enter sample data such as `5`
+    ![Change value topic input](./assets/Lab2_4_1_11_ReplaceArtIT.png)
 
-    ![Add number input](./assets/Lab2_4_1_12_AddNumberInput.jpg)
+1. Close the **topic** input and select **Test** and a response to the prompt regarding the values provided in the sample data of the input is returned.
 
-1. Repeat the same for the second and third input of topic and format. Make sure you provide sample data.
-
-    ![Input parameters](./assets/Lab2_4_1_13_InputParameters.jpg)
-
-1. Next, the inputs needs to be inserted into the prompt. In the Prompt, highlight **[number]** and select **+ Insert** and select **number**. The input of _number_ has now been added to the prompt as an input. Repeat the same steps for the remaining inputs.
-
-    ![Insert inputs](./assets/Lab2_4_1_14_PromptInputParameters.jpg)
-
-1. Test the prompt before saving the custom prompt. Select **Test prompt** and a response to the prompt regarding the values provided in the sample data of the input is returned. You can also **maximize** the prompt response box to enlarge the prompt response dialog.
-
-    ![Test Prompt response](./assets/Lab2_4_1_15_TestPromptResponse.jpg)
-
-1. Since we're not covering Dataverse in this workshop, the **Data used (preview)** does not need to be updated in the **Prompt settings**. The **Output** can be left as the default which is Text, and the **Settings** can be left as the default.
+    ![Test Prompt response](./assets/Lab2_4_1_12_Test.png)
 
     Let's now save the prompt by selecting **Save custom prompt**
 
-    ![Save custom prompt](./assets/Lab2_4_1_16_SaveCustomPrompt.jpg)
+    ![Save custom prompt](./assets/Lab2_4_1_13_Save.png)
 
 1. The prompt action node will now appear in the authoring canvas of the Topic. Next, the values of the input parameter need to be defined in order for the agent to populate them. This value can be
     - a literal value
