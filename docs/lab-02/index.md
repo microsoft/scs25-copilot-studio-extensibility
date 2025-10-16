@@ -361,64 +361,43 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
     ![Save custom prompt](./assets/Lab2_4_1_13_Save.png)
 
-1. The prompt action node will now appear in the authoring canvas of the Topic. The same three inputs we saw in the instructions in the Prompt Builder are available here: topic, format and number.
+    The prompt action node will now appear in the authoring canvas of the Topic. The same three inputs we saw in the instructions in the Prompt Builder are available here: topic, format and number.
 
     ![Input variable value](./assets/Lab2_4_1_14_InputParameters.png)
 
-1. Repeat the same for the remaining input parameters of the prompt action.
+1. Select **...** under _topic_, select **System**, search for **Activity.Text** and select it
+1. Repeat the same for _format_ and _number_
 
-    ![Input Parameter Values selected](./assets/Lab2_4_1_19_InputParameterValueSelected.jpg)
+    If you're done, the inputs should look like this:
 
-1. Next, we need to define the output variable of the prompt action. This is so that the response can be referenced downstream in the topic. Select the **>** icon and in the **Custom** tab, select **Create new**
+    ![Inputs filled](./assets/Lab2_4_1_15_Inputs.png)
 
-    ![Create new output variable](./assets/Lab2_4_1_20_CreateActionOutputVariable.jpg)
+1. Under _Outputs_, select **Select a variable**
+1. Select **Create a variable**
+1. Select **Var1**
+1. Rename the _Var1_ to **VarPrompt**
+1. Select **X** to close the _Variable Properties_ sidebar
+1. Select the **+** icon to add another node
+1. Select **Send a message**
+1. Select **{x}** to add a variable
+1. Select **VarPrompt.Text**
 
-1. A new variable named `Var1` appears as the variable output. Select the variable and the variable properties pane will appear. Enter a variable name such as `VarQuizQuestionsResponse`
+    ![Select variable](./assets/Lab2_4_1_16_VarPromptText.png)
 
-    ![Prompt action variable output](./assets/Lab2_4_1_21_VariableOutput.jpg)
+    Your message should look like this:
 
-1. Below the Prompt action, select the **+** icon to add a new node and select **Send a message**. Select the **{x}** variable icon.
+    ![Select variable](./assets/Lab2_4_1_17_VarPromptText.png)
 
-    ![Send a message node](./assets/Lab2_4_1_22_SendMessage.jpg)
-
-1. Select the variable **VarQuizQuestionsResponse.text**. This will add the text property of the prompt action response to the send a message node.
-
-    ![Select variable output](./assets/Lab2_4_1_23_VarQuizQuestionsResponse.text.jpg)
-
-1. Select **Save** to save your topic.
-
-1. The Topic details needs to be updated next which will be used by your agent to associate the topic with the user's intent when [Generative mode](https://learn.microsoft.com/microsoft-copilot-studio/advanced-generative-actions#how-does-generative-mode-work) is enabled. Select **Details** and for the **Display name** enter the following
-
-    ```text
-    generate questions for a quiz
-    ```
-
-    For the **Description** enter the following
+1. Select **Save** to save the topic
+1. Select **Test** to open the _Test your agent_ sidebar
+1. Enter the following message and send it:
 
     ```text
-    This topic creates questions for a quiz based on the number of questions, the topic and format provided by the user
+    Create a quiz about Microsoft with 5 questions that are true or false
     ```
 
-    ![Update Topic details](./assets/Lab2_4_1_24_UpdateTopicDetails.jpg)
+    This should give you a response like this:
 
-1. Select **Save** to save your topic.
+    ![Test the agent](./assets/Lab2_4_1_18_Test.png)
 
-1. Lastly, the [Generative mode](https://learn.microsoft.com/microsoft-copilot-studio/advanced-generative-actions#how-does-generative-mode-work) setting needs to be enabled for the agent to call the topic with the prompt action. Select **Settings** for your agent.
-
-    ![Agent settings](./assets/Lab2_4_1_25_Settings.jpg)
-
-1. Select the **Generative AI** setting and select **Generate (preview)** followed by selecting **Save**.
-
-    ![Enable Generative mode](./assets/Lab2_4_1_26_EnableGenerativeMode.jpg)
-
-1. Great, we're now ready to test the agent. In the test pane, select the **refresh** icon. Then enter the following question,
-
-    ```text
-    Create 5 questions for a quiz based on geography and format the quiz as multi choice
-    ```
-
-    ![Test prompt action](./assets/Lab2_4_1_27_TestPromptAction.jpg)
-
-1. A response is returned where 5 questions have been provided with the answers on the topic of geography and is formatted as multi choice questions.
-
-    ![Test prompt action response](./assets/Lab2_4_1_28_TestPromptActionResponse.jpg)
+This is the end.... of lab 2!
