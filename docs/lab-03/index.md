@@ -95,7 +95,7 @@ As a minimum you need to enter a unique id for this action. Choose a name which 
 We want to call the Community Event API to get a list of all available events, which we can call it with a **GET** request to this url:
 **<https://apim-dhino-fetch-prod-002.azure-api.net/002/export/query/FF4740ED-7415-4D36-80A7-7E7C565806AA/974BB697-57A4-4132-8A6E-C6E11BCE5493/EVENTS>**
 
-The two GUIDs in the URL are referencing the environment we want to target and we will consider them static for now, they point to the Workshop database (we weren't allowed to use the PROD database 😉)
+The two GUIDs in the URL are referencing the environment we want to target and we will consider them static for now, they point to the community database in our community tenant.
 
 ### Request
 
@@ -179,7 +179,7 @@ Follow the same steps as we did in the operation, starting on the **Definition**
 
 !["New Action](./assets/lab03_05_newaction.png)
 
-The action is again a GET call to the following URL **<https://apim-dhino-fetch-test.azure-api.net/001/export/query/FEC542ED-32AA-4C6D-94E5-6B3841C96B59/910D07E6-F700-404E-8B5A-7263C9DCC58A/TRACKS>**
+The action is again a GET call to the following URL **<https://apim-dhino-fetch-prod-002.azure-api.net/002/export/query/FF4740ED-7415-4D36-80A7-7E7C565806AA/974BB697-57A4-4132-8A6E-C6E11BCE5493/TRACKS>**
 
 After following the same steps as we did for the GET/EVENTS, you should see a test result like this:
 
@@ -193,13 +193,13 @@ Tip: Make sure to select the correct action on the left hand side before Import 
 
 ### GET/Session By Track
 
-Next step is calling the action which returns us sessions filtered by track. The Community Event API offers the following GET endpoint, here as an example for the track **Isklar**:
+Next step is calling the action which returns us sessions filtered by track. The Community Event API offers the following GET endpoint, here as an example for the track **Power Platform**:
 
-**<https://apim-dhino-fetch-test.azure-api.net/001/export/query/FEC542ED-32AA-4C6D-94E5-6B3841C96B59/910D07E6-F700-404E-8B5A-7263C9DCC58A/SESSIONSBYTRACK?filter=6c7a850b-517c-ef11-ac20-000d3a2a0e54>**
+**<https://apim-dhino-fetch-prod-002.azure-api.net/002/export/query/FF4740ED-7415-4D36-80A7-7E7C565806AA/974BB697-57A4-4132-8A6E-C6E11BCE5493/SESSIONSBYTRACK?filter=2653cbaf-c0aa-f011-bbd2-7ced8d40f28f>**
 
-This is the endpoint for track **Farris**:
+This is the endpoint for track **Dynamics 365**:
 
-**<https://apim-dhino-fetch-test.azure-api.net/001/export/query/FEC542ED-32AA-4C6D-94E5-6B3841C96B59/910D07E6-F700-404E-8B5A-7263C9DCC58A/SESSIONSBYTRACK?filter=66d159f9-507c-ef11-ac20-000d3a2a0e54>**
+**<https://apim-dhino-fetch-prod-002.azure-api.net/002/export/query/FF4740ED-7415-4D36-80A7-7E7C565806AA/974BB697-57A4-4132-8A6E-C6E11BCE5493/SESSIONSBYTRACK?filter=8326f5b6-c0aa-f011-bbd2-7ced8d40f28f>**
 
 The dynamic part of this request is the part after the "?filter=" followed by the **Id** of a track.
 
@@ -225,4 +225,4 @@ After this let's test our new function! **Update Connector** and move to the **T
 
 !["Test Parameter"](./assets/lab03_05_testparameter.png)
 
-This works pretty well! But obviously this not an ideal user experience, you need to know very cryptic GUIDs and there is no support on how to enter them. Let's improve that in the next lab!
+This works pretty well! But obviously this not an ideal user experience, you need to know very cryptic GUIDs and there is no support on how to enter them. Let's improve that in the next step!
