@@ -261,16 +261,8 @@ We will use the **Dynamic** option in this case.
 
 Awesome let's **Update Connector** and go to our Test page!
 
-## Task 2: Test using the Test page within a Custom Connector
-
-Sadly, these (and most of the other UI features) are not supported here 🙁 The Test pages is only for Developers and supports only manual inputs.
-
-!["Test Console Dynamic"](./assets/lab03_01_testconsole.png)
-
-🏆 for the shortest task in this workshop, but let's look at the other option we can use for this 👍
-
 ## 🪄 Testing in Power Automate
-Power Automate, more specifically Power Automate Cloud Flows is probably the tool using Custom Connectors the most. In order to create our test flow, navigate to your solution (remember the best practice: Everything inside solutions!), by selecting **Solutions** on the left hand side and opening your created solution from Lab 02.
+Power Automate, more specifically Power Automate Cloud Flows is probably the tool using Custom Connectors the most. In order to create our test flow, navigate to your solution (remember the best practice: Everything inside solutions!), by selecting **Solutions** on the left hand side and opening your created solution from before in this lab.
 
 !["Navigate to Solution"](./assets/Lab03_02_solution.png)
 
@@ -278,7 +270,7 @@ In your solution you should already see your connector 🙂 (sometimes the UI ta
 
 !["Custom Connector in Solution"](./assets/lab03_02_customconnector.png)
 
-We are going to add a new **Manuel Flow** by clicking on **New** -> **Automation** -> ** Cloud Flow** -> **Manual**
+We are going to add a new **Manuel Flow** by clicking on **New** -> **Automation** -> **Cloud Flow** -> **Manual**
 
 Manual means that the flow can be trigger manually via the UI which is usually the easiest for testing and debugging.
 
@@ -303,8 +295,6 @@ After selecting our Custom Connector we see all available actions we did define 
 !["Available actions"](./assets/lab03_02_actions.png)
 
 The first time you use a Custom Connector in Power Automate you must create a new connection for security reasons. You can choose any name and reuse the API Key from before.
-
-!["Action Connection"](./assets/lab03_02_connection.png)
 
 After we created the connection we do see our parameter field, but this time it is displayed as a dropdown!
 
