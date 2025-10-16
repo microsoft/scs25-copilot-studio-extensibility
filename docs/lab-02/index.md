@@ -318,7 +318,14 @@ Let's start by creating a topic:
     > It might also show you a summarization message (which is bug that will be fixed soon!)
     > ![Message](./assets/Lab2_3_1_20_Message.png)
 
-## 📊 Add Dataverse as a knowledge source - Dataverse entity suppliers / data excel file (Mats)
+## 📊 Add Dataverse as a knowledge source - Dataverse entity suppliers / data excel file
+
+Next we want our agent to have access to our device support database to check which devices are known for having a lot of defects to avoid those. For that we will of course use a proper database - Dataverse. There is a prepared **Device Management** solution which we will import to have a structure for the demo data.
+
+Download  **[Device Management Solution](./resources/LabDeviceSupport_1_0_0_1_managed.zip)** and open  **[make.powerapps.com](https://make.powerapps.com)**. You will be redirected to your Developer Environment. There click on solutions and on **Import**.
+
+![Import Solution](./assets/lab02_04_dataverse1.png)
+
 
 ## ✨ Enrich your agent with AI Prompts
 
