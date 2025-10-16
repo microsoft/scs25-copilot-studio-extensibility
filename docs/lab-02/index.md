@@ -13,7 +13,7 @@ In this lab, you will go through the following tasks:
 
 Best Practice for everything in the Power Platform: Work INSIDE solutions. They are great for organizing your customizations and some features only work here plus they over ALM capabilities (remember from last lab?).
 
-Because of that our first step within **[make.powerapps.com](https://make.apps.com)** is to navigate to **Solutions** on the left hand side and click on **New Solution**
+Because of that our first step within **[make.powerapps.com](https://make.powerapps.com)** is to navigate to **Solutions** on the left hand side and click on **New Solution**
 
 !["Create new solution"](./assets/lab03_conblank_01_createsolution.png)
 
@@ -31,6 +31,17 @@ Congrats you have a solution for doing our Agent development! Every journey star
 Now we are going to create our agent. Navigate to your newly created solution select **New** -> **Agent** -> **Agent**, this will redirect you to Copilot Studio where all the agent magic happens.
 
 !["Create agent"](./assets/lab02_01_createagent.png)
+
+
+### Copilot Studio
+
+Now we are in the Agent editing experience. First step give the agent a name. If you started in the solution to create the agent it will already be linked, if you started in Copilot Studio you connect the Agent with our solution, for this select the three dots and select **Update advanced settings**.
+
+!["Create Agent in Copilot Studio"](./assets/lab02_01_copilotstudio1.png)
+
+Select the solution you created before and press **Update**. Now your agent is attached to your solution.
+
+!["Connect with a solution"](./assets/lab02_01_copilotstudio2.png)
 
 
 ## 🌐 Add a website as a knowledge source - Microsoft Learn (Mats)
