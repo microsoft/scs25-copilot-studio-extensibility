@@ -7,6 +7,8 @@ In this lab, you will go through the following tasks:
 * Setup authentication
 * Add operation with Parameters
 
+We will use the communit event API as an example to connect to.
+
 ## 🏗️ Create a solution
 
 Best Practice for everything in the Power Platform: Work INSIDE solutions. They are great for organizing your customizations and some features only work here plus they over ALM capabilities.
@@ -50,7 +52,7 @@ Next you need to select **HTTPS** and fill in the **Host** and **Base URL**. The
 
 Click on **Security** on the bottom or in the wizard status on top to move on to the next step. Authentication describes how the Custom Connector will authenticate with the API and the options to choose from depends on the used API.
 
-For the Nordic Summit Event API the authentication is done via an **API Key**, so select this option
+For the Event API the authentication is done via an **API Key**, so select this option
 
 !["Authentication Type"](./assets/lab03_02_security.png)
 
