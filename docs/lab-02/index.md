@@ -45,7 +45,7 @@ Select the solution you created before and press **Update**. Now your agent is a
 
 After creating the agent, add **Instructions**. In our lab we are going to create an agent to help users picking new devices when ordering with internal IT.
 
-In the next step we will add Microsoft Learn as a Knowledge source to ground the agent in current information about Prompts and compatibilities.
+In the next step we will add Microsoft Learn as a Knowledge source to ground the agent in current information about Prompts and compatibilities. Especially we want to use it as a source to get information about what requirement Windows 11 devices have to connect that info in the next steps with our internal device datastores.
 
 
 ## 🌐 Add a website as a knowledge source - Microsoft Learn
@@ -58,9 +58,23 @@ In the opening dialog you can select between all the available options provided 
 
 !["Add Public Website"](./assets/lab02_02_addknowledge2.png)
 
-To add Microsoft Learn as a knowledge source add the domain **https://www.microsoft.com/** and **Add**. In the next step give it a name and a useful description.
+To add Microsoft Learn as a knowledge source add the domain **https://www.microsoft.com/** and **Add**. 
 
 !["Add Microsoft Learn as knowledge source"](./assets/lab02_02_addknowledge3.png)
+
+In the next step give it a name and a useful description. Afterward click on **Add to Agent** to finalize adding the knowledge source. This might take a short while.
+
+Let's test it! Click on **Test** in the right hand top corner to open the chat windows to test your agent with the knowledge you added before.
+
+!["Test chat mode in agent"](./assets/lab02_02_testing.png)
+
+We want to give the agent the ability to know which requirements a Windows 11 device needs to fulfil, that knowledge is on learn.microsoft.com so let's test our agent with the following prompt:
+
+**Which hardware requirements does a device need to fulfill to be able to run Windows 11?**
+
+!["Test chat mode in agent"](./assets/lab02_02_testing2.png)
+
+In Test mode you can always see what the agent is referencing in the main window, in this case we see that it is using the information it got from learn.microsoft.com! Awesome, now our agent always has access to the most current information about requirements around Windows devices.
 
 
 ## 🎨 Use adaptive cards to make your agent look nicer
