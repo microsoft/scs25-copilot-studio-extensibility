@@ -7,7 +7,35 @@ In this lab, you will go through the following tasks:
 - Add Dataverse as a knowledge source
 - Enrich your agent with AI Prompts
 
+## 🤖 Create your agent
+
+### Create a solution
+
+Best Practice for everything in the Power Platform: Work INSIDE solutions. They are great for organizing your customizations and some features only work here plus they over ALM capabilities (remember from last lab?).
+
+Because of that our first step within **[make.powerapps.com](https://make.apps.com)** is to navigate to **Solutions** on the left hand side and click on **New Solution**
+
+!["Create new solution"](./assets/lab03_conblank_01_createsolution.png)
+
+In the dialog which open give your solution a meaningful name and select either create an own publisher by clicking **New** or use the **Default Publisher** named after your environment.
+
+!["Create Solution Dialog"](./assets/lab03_conblank_02_solutionwizard.png)
+
+> [!NOTE]
+> Using the Default Publisher is not considered best practice because you have no control about the technical prefix all your components will receive. 
+
+Congrats you have a solution for doing our Agent development! Every journey starts with the first step 💪
+
+### Create the agent inside the solution
+
+Now we are going to create our agent. Navigate to your newly created solution select **New** -> **Agent** -> **Agent**, this will redirect you to Copilot Studio where all the agent magic happens.
+
+!["Create agent"](./assets/lab02_01_createagent.png)
+
+
 ## 🌐 Add a website as a knowledge source - Microsoft Learn (Mats)
+
+
 
 ## 🎨 Use adaptive cards to make your agent look nicer
 
