@@ -334,6 +334,34 @@ This will take a short while, but after a few seconds to minutes you will see th
 
 ![Open Dataverse Apps](./assets/lab02_04_dataverse3.png)
 
+Click on **Play** for the **Device Management** app.
+
+![Open Device Management App](./assets/lab02_04_dataverse4.png)
+
+The **Device Management** app automatically opens the view for the table **Device Defects**. Into this table we will import demo data for defects of devices to make this available to our agent as a second step. Click on the three dots and then on **Import from Excel** and in the submenu on **Import CSV**
+
+![Import CSV Wizard - File](./assets/lab02_04_dataverse5.png)
+
+For this download the following demo CSV LINK. and select it in the **Import from CSV** dialog.
+
+![Import CSV - File Delimiter](./assets/lab02_04_dataverse6.png)
+
+Click **Next** and make sure that you select **Semicolon** as Field Delimiter, after click on **Review Mapping**.
+
+![Import CSV - Field Mapping](./assets/lab02_04_dataverse7.png)
+
+The import wizard makes suggestions for field mappings of the CSV columns to Dataverse fields. Check those, most should be okay, you will probably just have to select **Faulty Device** as a boolean field and match the values **false** and **true** from the CSV. **Confirm the mapping of the option values with Okay!**
+
+![Import CSV - Start Import](./assets/lab02_04_dataverse8.png)
+
+After checking the mappings click on **Import** and **Confirm** the import in the next  dialog. The import might take a short while. Click on **Track Progress** to see a status of the import.
+
+If successful you will see records in the **Device Defect** table after a short while:
+
+![Imported Records](./assets/lab02_04_dataverse8.png)
+
+
+
 
 ## ✨ Enrich your agent with AI Prompts
 
