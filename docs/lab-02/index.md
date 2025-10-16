@@ -67,6 +67,45 @@ Let's start by creating a topic:
 
     ![List name](./assets/Lab2_3_1_07_ListName.png)
 
+1. Close the sidebar by selecting the **X** on the top right
+
+    We have now configured the connector tool to get all devices in the SharePoint list, but we want to filter on type of devices. Lets get that working now!
+
+1. Select the **+** above the _Get items_ node
+1. Select **Add a question**
+1. Enter the following question in the text box
+
+    ```text
+    What type of device are you looking for?
+    ```
+
+    ![Question for type of device](./assets/Lab2_3_1_08_QuestionType.png)
+
+1. Select **New option** under _Options for user_
+1. Enter **Desktop** in the input box that appears
+1. Add two options for **Tablet** and **Laptop** too
+
+    ![Question for type of device - options complete](./assets/Lab2_3_1_09_QuestionTypeOptionsComplete.png)
+
+1. Select **Var1**
+
+    This will open a sidebar where you can change the name of the variable
+1. Change the name of the variable to **VarDeviceType**
+1. Close the sidebar by selecting **X**
+1. Next, remove the conditions for **Desktop**, **Tablet** and **Laptop** by selecting **...** and **Delete**
+
+    The nodes below the trigger in your topic should look like this now:
+
+    ![Conditions removed](./assets/Lab2_3_1_10_ConditionsRemoved.png)
+
+    Next, we want to make sure the SharePoint connector tool should filter on the choice the user made in the question.
+
+1. Select the **+** icon above the _Get Items_ node, select **Variable management** and select **Set a variable value**
+
+    ![Set a variable value](./assets/Lab2_3_1_11_SetVariable.png)
+
+1.
+
 ## ✨ Enrich your agent with AI Prompts
 
 There is a lot of content available in our agent now, but we haven't shown one of the hidden gems of Copilot Studio yet: AI Prompts!
