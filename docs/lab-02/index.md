@@ -15,6 +15,12 @@ In this lab, you will go through the following tasks:
 
 Now lets make sure the users of our agent can ask for content - and lets use a different option here. Instead of using knowledge, we will create a topic with an adaptive card. The adaptive card will be used to make sure not only text is shown, but also a bit of design is shown.
 
+In this part of the lab, we will add a topic called Devices. In this topic, we will get items from a SharePoint list and return them in an adaptive card. This will make your agent look way better. ✨
+
+```text
+This topic helps you discover available devices in your organization's inventory by browsing through the complete catalog. You can easily filter devices by type—whether you're looking for desktops, tablets, or laptops—to quickly narrow down your search. Simply ask what devices are available or specify the type you need, and the chatbot will show you matching options with relevant details.
+```
+
 ## ✨ Enrich your agent with AI Prompts
 
 There is a lot of content available in our agent now, but we haven't shown one of the hidden gems of Copilot Studio yet: AI Prompts!
