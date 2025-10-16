@@ -322,9 +322,17 @@ Let's start by creating a topic:
 
 Next we want our agent to have access to our device support database to check which devices are known for having a lot of defects to avoid those. For that we will of course use a proper database - Dataverse. There is a prepared **Device Management** solution which we will import to have a structure for the demo data.
 
-Download  **[Device Management Solution](./resources/LabDeviceSupport_1_0_0_1_managed.zip)** and open  **[make.powerapps.com](https://make.powerapps.com)**. You will be redirected to your Developer Environment. There click on solutions and on **Import**.
+Download  **[Device Management Solution](https://github.com/microsoft/scs25-copilot-studio-extensibility/blob/main/docs/lab-02/resources/LabDeviceSupport_1_0_0_1_managed.zip)** and open  **[make.powerapps.com](https://make.powerapps.com)**. You will be redirected to your Developer Environment. There click on solutions and on **Import**.
 
 ![Import Solution](./assets/lab02_04_dataverse1.png)
+
+And select the downloaded soltion and click on **Import** in the Import Wizard.
+
+![Import Solution Wizard](./assets/lab02_04_dataverse2.png)
+
+This will take a short while, but after a few seconds to minutes you will see the success message. After the sucessful import click on **Apps**. The solution contains one Model Driven App we will use to import the demo data.
+
+![Open Dataverse Apps](./assets/lab02_04_dataverse3.png)
 
 
 ## ✨ Enrich your agent with AI Prompts
