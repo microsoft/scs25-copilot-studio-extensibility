@@ -333,9 +333,16 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
     ![Save custom prompt](./assets/Lab2_4_1_13_Save.png)
 
-1. The prompt action node will now appear in the authoring canvas of the Topic. The same three inputs we saw in the instructions in the Prompt Builder are available here: topic, format and number.
+    The prompt action node will now appear in the authoring canvas of the Topic. The same three inputs we saw in the instructions in the Prompt Builder are available here: topic, format and number.
 
     ![Input variable value](./assets/Lab2_4_1_14_InputParameters.png)
+
+1. Select **...** under _topic_, select **System**, search for **Activity.Text** and select it
+1. Repeat the same for _format_ and _number_
+
+    If you're done, the inputs should look like this:
+
+    ![Inputs filled](./assets/Lab2_4_1_15_Inputs.png)
 
 1. Repeat the same for the remaining input parameters of the prompt action.
 
