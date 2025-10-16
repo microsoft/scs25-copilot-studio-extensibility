@@ -2,12 +2,10 @@
 
 In this lab, you will go through the following tasks:
 
-- Add Dataverse as a knowledge source
 - Add a website as a knowledge source
 - Use adaptive cards to make your agent look nicer
+- Add Dataverse as a knowledge source
 - Enrich your agent with AI Prompts
-
-## 📊 Add Dataverse as a knowledge source - Dataverse entity suppliers / data excel file (Mats)
 
 ## 🌐 Add a website as a knowledge source - Microsoft Learn (Mats)
 
@@ -250,8 +248,9 @@ Let's start by creating a topic:
 
     > [!IMPORTANT]
     > It might also show you a summarization message (which is bug that will be fixed soon!)
-    >
     > ![Message](./assets/Lab2_3_1_20_Message.png)
+
+## 📊 Add Dataverse as a knowledge source - Dataverse entity suppliers / data excel file (Mats)
 
 ## ✨ Enrich your agent with AI Prompts
 
