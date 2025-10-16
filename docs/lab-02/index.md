@@ -91,7 +91,7 @@ Let's start by creating a topic:
 
     This will open a sidebar where you can change the name of the variable
 1. Change the name of the variable to **VarDeviceType**
-1. Close the sidebar by selecting **X**
+1. Close the sidebar by selecting the **X** icon
 1. Next, remove the conditions for **Desktop**, **Tablet** and **Laptop** by selecting **...** and **Delete**
 
     The nodes below the trigger in your topic should look like this now:
@@ -112,14 +112,141 @@ Let's start by creating a topic:
     Concatenate("Status eq 'Available' and AssetType eq '", Topic.VarDeviceType, "'")
     ```
 
-1. Select **Submit**
+1. Select **Insert**
 
     ![Enter formula](./assets/Lab2_3_1_14_Formula.png)
 
+1. Close the sidebar by selecting the **X** icon
 1. Select **Site Address** again under _Inputs_
 1. Select **...** under _Filter Query_ and then select **VarFilter**
 
     ![Select Filter](./assets/Lab2_3_1_15_SelectVariable.png)
+
+1. Exit out of the _Get Items_ sidebar
+1. Select **GetItems** under _Outputs_
+1. Change the variable name to **VarDevices**
+1. Select the **+** icon below the _Get Items_ node
+1. Select **Send a message**
+1. Select **+ Add**
+1. Select **Adaptive card**
+
+    ![Add an adaptive card](./assets/Lab2_3_1_16_AddAdaptiveCard.png)
+
+1. Change the _Adaptive card_ from _JSON_ to **Formula**
+
+    ![JSON to Formula](./assets/Lab2_3_1_17_AdaptiveCardJSONtoFormula.png)
+
+1. Copy the below Adaptive card and paste it in the **Input field** below _Formula_
+
+    ```json
+    {
+        type: "AdaptiveCard",
+        body: [
+                    {
+                        type: "TextBlock",
+                        text: "AVAILABLE DEVICES",
+                        wrap: true,
+                        size: "Small",
+                        isSubtle: true,
+                        weight: "Bolder",
+                        spacing: "Medium"
+                    },
+                    {
+                    type:"Container",
+                    items: 
+                        ForAll(Topic.VarDevices.value,
+                        {
+                        
+                        type: "ColumnSet",
+                        columns: [
+                            {
+                                type: "Column",
+                                width: "80px",
+                                minHeight: "80px",
+                                items: [
+                                    {
+                                        type: "Container",
+                                        backgroundImage: {
+                                            url: Image,
+                                            horizontalAlignment: "Center",
+                                            verticalAlignment: "Center"
+                                        },
+                                        minHeight: "80px",
+                                        horizontalAlignment: "Center",
+                                        verticalContentAlignment: "Center"
+                                    }
+                                ],
+                                verticalContentAlignment: "Center",
+                                horizontalAlignment: "Left"
+                            },
+                            {
+                                type: "Column",
+                                width: "auto",
+                                items: [
+                                    {
+                                        type: "TextBlock",
+                                        text: Model,
+                                        wrap: true,
+                                        weight: "Bolder",
+                                        size: "Medium"
+                                    },
+                                    {
+                                        type: "TextBlock",
+                                        text: Manufacturer.Value,
+                                        isSubtle: true,
+                                        wrap: true,
+                                        spacing: "Small",
+                                        maxLines: 1
+                                    },
+                                      {
+                                        type: "TextBlock",
+                                        text: "Color: " & Color.Value,
+                                        isSubtle: true,
+                                        wrap: true,
+                                        spacing: "Small",
+                                        maxLines: 1
+                                    }
+                                ],
+                                verticalContentAlignment: "Center"
+                            },
+                            {
+                                type: "Column",
+                                width: "20px",
+                                items: [
+                                    {
+                                        type: "Image",
+                                        url: "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/visual-list/assets/arrow-right.png",
+                                        horizontalAlignment: "Right",
+                                        width: "20px",
+                                        height: "20px",
+                                        selectAction: {
+                                            type:"Action.OpenUrl",
+                                            url:'{Link}'
+                                        }
+                                    }
+                                ],
+                                verticalContentAlignment: "Center"
+                            }
+                        ]
+                    }
+            )
+            }
+        ]
+    }
+    ```
+
+1. Select the **X** icon of the _Adaptive card properties_ sidebar
+1. Select **Save** to save the topic
+1. Select **Test** to test your agent
+1. Enter **Select a device** and send
+1. Select **Laptop**
+1. Select **Allow** in the _Connect to continue_ card
+
+    ![Allow connection](./assets/Lab2_3_1_18_AllowConnection.png)
+
+    This will send you the Adaptive card as a response.
+
+    ![Adaptive Card Output](./assets/Lab2_3_1_19_AdaptiveCardiPhone.png)
 
 ## ✨ Enrich your agent with AI Prompts
 
