@@ -424,5 +424,5 @@ FodyWeavers.xsd
 .DS_Store
 
 # Ignore VitePress files
-.vitepress/dist
-.vitepress/cache
+docs/.vitepress/dist
+docs/.vitepress/cache
