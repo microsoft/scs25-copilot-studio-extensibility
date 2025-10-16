@@ -17,9 +17,55 @@ Now lets make sure the users of our agent can ask for content - and lets use a d
 
 In this part of the lab, we will add a topic called Devices. In this topic, we will get items from a SharePoint list and return them in an adaptive card. This will make your agent look way better. ✨
 
-```text
-This topic helps you discover available devices in your organization's inventory by browsing through the complete catalog. You can easily filter devices by type—whether you're looking for desktops, tablets, or laptops—to quickly narrow down your search. Simply ask what devices are available or specify the type you need, and the chatbot will show you matching options with relevant details.
-```
+Let's start by creating a topic:
+
+1. Select **Add a topic** and then **From blank**
+
+    ![Add a topic from blank](./assets/Lab2_3_1_01_AddTopicFromBlank.png)
+
+1. Change the topic name from _Untitled_ to **Devices**
+1. Paste the following text under **Describe what the topic does**
+
+    ```text
+    This topic helps you discover available devices in your organization's inventory by browsing through the complete catalog. You can easily filter devices by type—whether you're looking for desktops, tablets, or laptops—to quickly narrow down your search. Simply ask what devices are available or specify the type you need, and the chatbot will show you matching options with relevant details.
+    ```
+
+1. Select the **Save** button to save the topic
+
+    Next, we will create a connector tool to get the items from SharePoint.
+
+1. Below the trigger select the **+** icon to add a new node, select **Add a tool**, select **Connector**, search for **Get items**, and select the **Get items** tool from SharePoint
+1. Select **Not connected** and select **Create new connection**
+
+    ![Create new connection](./assets/Lab2_3_1_02_CreateNewConnection.png)
+
+1. Select **Create** to create the connection
+1. Pick your account from the sign in screen
+1. Select **Submit**
+
+    The connector tool will get added to the canvas now.
+
+    ![Get Items](./assets/Lab2_3_1_03_GetItems.png)
+
+1. Select **Site Address** under _Inputs_
+
+    ![Site Address Input](./assets/Lab2_3_1_04_GetItemsInputs.png)
+
+    This will open a sidebar with configuration options for the inputs.
+
+    ![Sidebar](./assets/Lab2_3_1_05_Sidebar.png)
+
+1. Select the **dropdown menu** under _Site Address_, select **Enter custom value** and paste the following address:
+
+    ```text
+    https://ppcc25workshop01.sharepoint.com/sites/IT/
+    ```
+
+    ![Site Address](./assets/Lab2_3_1_06_SiteAddress.png)
+
+1. Select the **dropdown menu** under _List name_ and select **Devices**
+
+    ![List name](./assets/Lab2_3_1_07_ListName.png)
 
 ## ✨ Enrich your agent with AI Prompts
 
