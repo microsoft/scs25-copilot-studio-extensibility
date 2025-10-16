@@ -43,9 +43,24 @@ Select the solution you created before and press **Update**. Now your agent is a
 
 !["Connect with a solution"](./assets/lab02_01_copilotstudio2.png)
 
+After creating the agent, add **Instructions**. In our lab we are going to create an agent to help users picking new devices when ordering with internal IT.
 
-## 🌐 Add a website as a knowledge source - Microsoft Learn (Mats)
+In the next step we will add Microsoft Learn as a Knowledge source to ground the agent in current information about Prompts and compatibilities.
 
+
+## 🌐 Add a website as a knowledge source - Microsoft Learn
+
+We are going to start extending our agent by adding **Knowledge** to it. In Copilot Studio the most simple way of doing this is **Knowledge Sources**. To add one, click on **Knowledge** and **Add Knowledge**.
+
+!["Add Knowledge"](./assets/lab02_02_addknowledge.png)
+
+In the opening dialog you can select between all the available options provided by Microsoft. We are going to use **Public Website** to get **Real-Time** data.
+
+!["Add Public Website"](./assets/lab02_02_addknowledge2.png)
+
+To add Microsoft Learn as a knowledge source add the domain **https://www.microsoft.com/** and **Add**. In the next step give it a name and a useful description.
+
+!["Add Microsoft Learn as knowledge source"](./assets/lab02_02_addknowledge3.png)
 
 
 ## 🎨 Use adaptive cards to make your agent look nicer
