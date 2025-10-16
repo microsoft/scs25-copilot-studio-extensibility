@@ -17,9 +17,241 @@ Now lets make sure the users of our agent can ask for content - and lets use a d
 
 In this part of the lab, we will add a topic called Devices. In this topic, we will get items from a SharePoint list and return them in an adaptive card. This will make your agent look way better. ✨
 
-```text
-This topic helps you discover available devices in your organization's inventory by browsing through the complete catalog. You can easily filter devices by type—whether you're looking for desktops, tablets, or laptops—to quickly narrow down your search. Simply ask what devices are available or specify the type you need, and the chatbot will show you matching options with relevant details.
-```
+Let's start by creating a topic:
+
+1. Select **Add a topic** and then **From blank**
+
+    ![Add a topic from blank](./assets/Lab2_3_1_01_AddTopicFromBlank.png)
+
+1. Change the topic name from _Untitled_ to **Devices**
+1. Paste the following text under **Describe what the topic does**
+
+    ```text
+    This topic helps you discover available devices in your organization's inventory by browsing through the complete catalog. You can easily filter devices by type—whether you're looking for desktops, tablets, or laptops—to quickly narrow down your search. Simply ask what devices are available or specify the type you need, and the chatbot will show you matching options with relevant details.
+    ```
+
+1. Select the **Save** button to save the topic
+
+    Next, we will create a connector tool to get the items from SharePoint.
+
+1. Below the trigger select the **+** icon to add a new node, select **Add a tool**, select **Connector**, search for **Get items**, and select the **Get items** tool from SharePoint
+1. Select **Not connected** and select **Create new connection**
+
+    ![Create new connection](./assets/Lab2_3_1_02_CreateNewConnection.png)
+
+1. Select **Create** to create the connection
+1. Pick your account from the sign in screen
+1. Select **Submit**
+
+    The connector tool will get added to the canvas now.
+
+    ![Get Items](./assets/Lab2_3_1_03_GetItems.png)
+
+1. Select **Site Address** under _Inputs_
+
+    ![Site Address Input](./assets/Lab2_3_1_04_GetItemsInputs.png)
+
+    This will open a sidebar with configuration options for the inputs.
+
+    ![Sidebar](./assets/Lab2_3_1_05_Sidebar.png)
+
+1. Select the **dropdown menu** under _Site Address_, select **Enter custom value** and paste the following address:
+
+    ```text
+    https://ppcc25workshop01.sharepoint.com/sites/IT/
+    ```
+
+    ![Site Address](./assets/Lab2_3_1_06_SiteAddress.png)
+
+1. Select the **dropdown menu** under _List name_ and select **Devices**
+
+    ![List name](./assets/Lab2_3_1_07_ListName.png)
+
+1. Close the sidebar by selecting the **X** on the top right
+
+    We have now configured the connector tool to get all devices in the SharePoint list, but we want to filter on type of devices. Lets get that working now!
+
+1. Select the **+** above the _Get items_ node
+1. Select **Add a question**
+1. Enter the following question in the text box
+
+    ```text
+    What type of device are you looking for?
+    ```
+
+    ![Question for type of device](./assets/Lab2_3_1_08_QuestionType.png)
+
+1. Select **New option** under _Options for user_
+1. Enter **Desktop** in the input box that appears
+1. Add two options for **Tablet** and **Laptop** too
+
+    ![Question for type of device - options complete](./assets/Lab2_3_1_09_QuestionTypeOptionsComplete.png)
+
+1. Select **Var1**
+
+    This will open a sidebar where you can change the name of the variable
+1. Change the name of the variable to **VarDeviceType**
+1. Close the sidebar by selecting the **X** icon
+1. Next, remove the conditions for **Desktop**, **Tablet** and **Laptop** by selecting **...** and **Delete**
+
+    The nodes below the trigger in your topic should look like this now:
+
+    ![Conditions removed](./assets/Lab2_3_1_10_ConditionsRemoved.png)
+
+    Next, we want to make sure the SharePoint connector tool should filter on the choice the user made in the question.
+
+1. Select the **+** icon above the _Get Items_ node, select **Variable management** and select **Set a variable value**
+
+    ![Set a variable value](./assets/Lab2_3_1_11_SetVariable.png)
+
+1. Select **Select a variable** under _Set Variable_ and select **Create a new variable**
+1. Select **Var1** and rename it to **VarFilter**
+1. Select **...**, select **Formula** and enter the following formula in the _fx_ input:
+
+    ```text
+    Concatenate("Status eq 'Available' and AssetType eq '", Topic.VarDeviceType, "'")
+    ```
+
+1. Select **Insert**
+
+    ![Enter formula](./assets/Lab2_3_1_14_Formula.png)
+
+1. Close the sidebar by selecting the **X** icon
+1. Select **Site Address** again under _Inputs_
+1. Select **...** under _Filter Query_ and then select **VarFilter**
+
+    ![Select Filter](./assets/Lab2_3_1_15_SelectVariable.png)
+
+1. Exit out of the _Get Items_ sidebar
+1. Select **GetItems** under _Outputs_
+1. Change the variable name to **VarDevices**
+1. Select the **+** icon below the _Get Items_ node
+1. Select **Send a message**
+1. Select **+ Add**
+1. Select **Adaptive card**
+
+    ![Add an adaptive card](./assets/Lab2_3_1_16_AddAdaptiveCard.png)
+
+1. Change the _Adaptive card_ from _JSON_ to **Formula**
+
+    ![JSON to Formula](./assets/Lab2_3_1_17_AdaptiveCardJSONtoFormula.png)
+
+1. Copy the below Adaptive card and paste it in the **Input field** below _Formula_
+
+    ```json
+    {
+        type: "AdaptiveCard",
+        body: [
+                    {
+                        type: "TextBlock",
+                        text: "AVAILABLE DEVICES",
+                        wrap: true,
+                        size: "Small",
+                        isSubtle: true,
+                        weight: "Bolder",
+                        spacing: "Medium"
+                    },
+                    {
+                    type:"Container",
+                    items: 
+                        ForAll(Topic.VarDevices.value,
+                        {
+                        
+                        type: "ColumnSet",
+                        columns: [
+                            {
+                                type: "Column",
+                                width: "80px",
+                                minHeight: "80px",
+                                items: [
+                                    {
+                                        type: "Container",
+                                        backgroundImage: {
+                                            url: Image,
+                                            horizontalAlignment: "Center",
+                                            verticalAlignment: "Center"
+                                        },
+                                        minHeight: "80px",
+                                        horizontalAlignment: "Center",
+                                        verticalContentAlignment: "Center"
+                                    }
+                                ],
+                                verticalContentAlignment: "Center",
+                                horizontalAlignment: "Left"
+                            },
+                            {
+                                type: "Column",
+                                width: "auto",
+                                items: [
+                                    {
+                                        type: "TextBlock",
+                                        text: Model,
+                                        wrap: true,
+                                        weight: "Bolder",
+                                        size: "Medium"
+                                    },
+                                    {
+                                        type: "TextBlock",
+                                        text: Manufacturer.Value,
+                                        isSubtle: true,
+                                        wrap: true,
+                                        spacing: "Small",
+                                        maxLines: 1
+                                    },
+                                      {
+                                        type: "TextBlock",
+                                        text: "Color: " & Color.Value,
+                                        isSubtle: true,
+                                        wrap: true,
+                                        spacing: "Small",
+                                        maxLines: 1
+                                    }
+                                ],
+                                verticalContentAlignment: "Center"
+                            },
+                            {
+                                type: "Column",
+                                width: "20px",
+                                items: [
+                                    {
+                                        type: "Image",
+                                        url: "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/visual-list/assets/arrow-right.png",
+                                        horizontalAlignment: "Right",
+                                        width: "20px",
+                                        height: "20px",
+                                        selectAction: {
+                                            type:"Action.OpenUrl",
+                                            url:'{Link}'
+                                        }
+                                    }
+                                ],
+                                verticalContentAlignment: "Center"
+                            }
+                        ]
+                    }
+            )
+            }
+        ]
+    }
+    ```
+
+1. Select the **X** icon of the _Adaptive card properties_ sidebar
+1. Select **Save** to save the topic
+1. Select **Test** to test your agent
+1. Enter **Select a device** and send
+1. Select **Laptop**
+1. Select **Allow** in the _Connect to continue_ card
+
+    ![Allow connection](./assets/Lab2_3_1_18_AllowConnection.png)
+
+    This will send you the Adaptive card as a response.
+
+    ![Adaptive Card Output](./assets/Lab2_3_1_19_AdaptiveCardiPhone.png)
+
+    > [!IMPORTANT]
+    > It might also show you a summarization message (which is bug that will be fixed soon!)
+    >
+    > ![Message](./assets/Lab2_3_1_20_Message.png)
 
 ## ✨ Enrich your agent with AI Prompts
 
