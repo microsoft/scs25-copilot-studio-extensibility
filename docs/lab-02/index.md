@@ -248,6 +248,11 @@ Let's start by creating a topic:
 
     ![Adaptive Card Output](./assets/Lab2_3_1_19_AdaptiveCardiPhone.png)
 
+    > [!IMPORTANT]
+    > It might also show you a summarization message (which is bug that will be fixed soon!)
+    >
+    > ![Message](./assets/Lab2_3_1_20_Message.png)
+
 ## ✨ Enrich your agent with AI Prompts
 
 There is a lot of content available in our agent now, but we haven't shown one of the hidden gems of Copilot Studio yet: AI Prompts!
