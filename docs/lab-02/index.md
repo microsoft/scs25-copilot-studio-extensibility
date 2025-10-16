@@ -19,7 +19,7 @@ Because of that our first step within **[make.powerapps.com](https://make.apps.c
 
 In the dialog which open give your solution a meaningful name and select either create an own publisher by clicking **New** or use the **Default Publisher** named after your environment.
 
-!["Create Solution Dialog"](./assets/lab03_conblank_02_solutionwizard.png)
+!["Create Solution Dialog"](./assets/lab02_01_solutionwizard.png)
 
 > [!NOTE]
 > Using the Default Publisher is not considered best practice because you have no control about the technical prefix all your components will receive. 
