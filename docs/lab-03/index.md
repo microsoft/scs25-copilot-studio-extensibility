@@ -22,7 +22,7 @@ In the dialog which open give your solution a meaningful name and select either 
 !["Create Solution Dialog"](./assets/lab03_conblank_02_solutionwizard.png)
 
 > [!NOTE]
-> Using the Default Publisher is not considered best practice because you have no control about the technical prefix all your components will receive.
+> Using the Default Publisher is not considered best practice because you have no control about the technical prefix all your components will receive. 
 
 Congrats you have a solution for doing our Custom Connector development! Every journey starts with the first step 💪
 
@@ -42,9 +42,9 @@ In a new tab the Custom Connector edit wizard will be opened in the first step.
 
 First step is given your Custom Connector a meaningful name, make sure to use a name your users will understand, this will show up in all UIs. Bonus points if you also add an icon below under **General Information**
 
-Next you need to select **HTTPS** and fill in the **Host** and **Base URL**. The Nordic Summit event API can be reached under the following url:
+Next you need to select **HTTPS** and fill in the **Host** and **Base URL**. The community event API can be reached via dhino (Middleware used to publish Dataverse data) under the following url. Do not fill the https:// part in the host and you can only put the root URL until the first "/" there. The "Base URL" is the part of the URL which is common to all requests being done via this custom connector.
 
-**<https://apim-dhino-fetch-test.azure-api.net/001>**
+**<https://apim-dhino-fetch-prod-002.azure-api.net/002 >**
 
 !["Adding Host and Base URL"](./assets/lab03_02_hosturl.png)
 
@@ -64,7 +64,7 @@ After selecting you will asked to enter the label, name and location of paramete
 
 **Location:** This defines where the Custom Connector will add the API Key information when making requests.
 
-The Nordic Summit Event API will be authenticated by an API Key in the Header of each HTTP Request called **Ocp-Apim-Subscription-Key**
+The Community Event API will be authenticated by an API Key in the Header of each HTTP Request called **Ocp-Apim-Subscription-Key**
 
 !["Api Key Setup"](./assets/lab03_02_apikey.png)
 
@@ -92,7 +92,7 @@ Creating an action consists of three steps:
 
 As a minimum you need to enter a unique id for this action. Choose a name which is easily recognizable and not a typical "id" because later on other actions use this id to refer to it.
 
-We want to call the Nordic Summit Event API to get a list of all available events, which we can call it with a **GET** request to this url:
+We want to call the Community Event API to get a list of all available events, which we can call it with a **GET** request to this url:
 **<https://apim-dhino-fetch-test.azure-api.net/001/export/query/FEC542ED-32AA-4C6D-94E5-6B3841C96B59/910D07E6-F700-404E-8B5A-7263C9DCC58A/EVENTS>**
 
 The two GUIDs in the URL are referencing the environment we want to target and we will consider them static for now, they point to the Workshop database (we weren't allowed to use the PROD database 😉)
@@ -137,7 +137,7 @@ If all is set up correct and the connection has the right API Key you will see t
 
 !["Test Result"](./assets/lab03_02_testresult.png)
 
-First call made by your Custom Connector to the Nordic Summit event API!
+First call made by your Custom Connector to the Community Event API!
 
 We will do one more step though, as you might noticed we skip one step in the definition part, the definition of the **Result** of our operation. Since we now have the result JSON let's add it!
 
@@ -193,7 +193,7 @@ Tip: Make sure to select the correct action on the left hand side before Import 
 
 ### GET/Session By Track
 
-Next step is calling the action which returns us sessions filtered by track. The Nordic Summit Event API offers the following GET endpoint, here as an example for the track **Isklar**:
+Next step is calling the action which returns us sessions filtered by track. The Community Event API offers the following GET endpoint, here as an example for the track **Isklar**:
 
 **<https://apim-dhino-fetch-test.azure-api.net/001/export/query/FEC542ED-32AA-4C6D-94E5-6B3841C96B59/910D07E6-F700-404E-8B5A-7263C9DCC58A/SESSIONSBYTRACK?filter=6c7a850b-517c-ef11-ac20-000d3a2a0e54>**
 
