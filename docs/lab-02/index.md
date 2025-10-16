@@ -104,7 +104,22 @@ Let's start by creating a topic:
 
     ![Set a variable value](./assets/Lab2_3_1_11_SetVariable.png)
 
-1.
+1. Select **Select a variable** under _Set Variable_ and select **Create a new variable**
+1. Select **Var1** and rename it to **VarFilter**
+1. Select **...**, select **Formula** and enter the following formula in the _fx_ input:
+
+    ```text
+    Concatenate("Status eq 'Available' and AssetType eq '", Topic.VarDeviceType, "'")
+    ```
+
+1. Select **Submit**
+
+    ![Enter formula](./assets/Lab2_3_1_14_Formula.png)
+
+1. Select **Site Address** again under _Inputs_
+1. Select **...** under _Filter Query_ and then select **VarFilter**
+
+    ![Select Filter](./assets/Lab2_3_1_15_SelectVariable.png)
 
 ## ✨ Enrich your agent with AI Prompts
 
