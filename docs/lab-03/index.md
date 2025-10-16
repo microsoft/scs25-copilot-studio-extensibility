@@ -13,7 +13,7 @@ We will use the communit event API as an example to connect to.
 
 Best Practice for everything in the Power Platform: Work INSIDE solutions. They are great for organizing your customizations and some features only work here plus they over ALM capabilities.
 
-Because of that our first step within **[make.powerautomate.com](https://make.powerautomate.com)** is to navigate to **Solutions** on the left hand side and click on **New Solution**
+Because of that our first step within **[make.powerapps.com](https://make.apps.com)** is to navigate to **Solutions** on the left hand side and click on **New Solution**
 
 !["Create new solution"](./assets/lab03_conblank_01_createsolution.png)
 
@@ -42,7 +42,7 @@ In a new tab the Custom Connector edit wizard will be opened in the first step.
 
 First step is given your Custom Connector a meaningful name, make sure to use a name your users will understand, this will show up in all UIs. Bonus points if you also add an icon below under **General Information**
 
-Next you need to select **HTTPS** and fill in the **Host** and **Base URL**. The community event API can be reached via dhino (Middleware used to publish Dataverse data) under the following url. Do not fill the https:// part in the host and you can only put the root URL until the first "/" there. The "Base URL" is the part of the URL which is common to all requests being done via this custom connector.
+Next you need to select **HTTPS** and fill in the **Host** and **Base URL**. The community event API can be reached via dhino (Middleware used to publish Dataverse data) under the following url. Do not fill the "https://" part in the host and you can only put the root URL until the first "/" there. The "Base URL" is the part of the URL which is common to all requests being done via this custom connector.
 
 **<https://apim-dhino-fetch-prod-002.azure-api.net/002 >**
 
@@ -93,7 +93,7 @@ Creating an action consists of three steps:
 As a minimum you need to enter a unique id for this action. Choose a name which is easily recognizable and not a typical "id" because later on other actions use this id to refer to it.
 
 We want to call the Community Event API to get a list of all available events, which we can call it with a **GET** request to this url:
-**<https://apim-dhino-fetch-test.azure-api.net/001/export/query/FEC542ED-32AA-4C6D-94E5-6B3841C96B59/910D07E6-F700-404E-8B5A-7263C9DCC58A/EVENTS>**
+**<https://apim-dhino-fetch-prod-002.azure-api.net/002/export/query/FF4740ED-7415-4D36-80A7-7E7C565806AA/974BB697-57A4-4132-8A6E-C6E11BCE5493/EVENTS>**
 
 The two GUIDs in the URL are referencing the environment we want to target and we will consider them static for now, they point to the Workshop database (we weren't allowed to use the PROD database 😉)
 
