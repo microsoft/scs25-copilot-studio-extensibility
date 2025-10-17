@@ -22,7 +22,7 @@ In the dialog which open give your solution a meaningful name and select either 
 !["Create Solution Dialog"](./assets/lab02_01_solutionwizard.png)
 
 > [!NOTE]
-> Using the Default Publisher is not considered best practice because you have no control about the technical prefix all your components will receive. 
+> Using the Default Publisher is not considered best practice because you have no control about the technical prefix all your components will receive.
 
 Congrats you have a solution for doing our Agent development! Every journey starts with the first step 💪
 
@@ -31,7 +31,6 @@ Congrats you have a solution for doing our Agent development! Every journey star
 Now we are going to create our agent. Navigate to your newly created solution select **New** -> **Agent** -> **Agent**, this will redirect you to Copilot Studio where all the agent magic happens.
 
 !["Create agent"](./assets/lab02_01_createagent.png)
-
 
 ### Copilot Studio
 
@@ -47,7 +46,6 @@ After creating the agent, add **Instructions**. In our lab we are going to creat
 
 In the next step we will add Microsoft Learn as a Knowledge source to ground the agent in current information about Prompts and compatibilities. Especially we want to use it as a source to get information about what requirement Windows 11 devices have to connect that info in the next steps with our internal device datastores.
 
-
 ## 🌐 Add a website as a knowledge source - Microsoft Learn
 
 We are going to start extending our agent by adding **Knowledge** to it. In Copilot Studio the most simple way of doing this is **Knowledge Sources**. To add one, click on **Knowledge** and **Add Knowledge**.
@@ -58,7 +56,7 @@ In the opening dialog you can select between all the available options provided 
 
 !["Add Public Website"](./assets/lab02_02_addknowledge2.png)
 
-To add Microsoft Learn as a knowledge source add the domain **https://www.microsoft.com/** and **Add**. 
+To add Microsoft Learn as a knowledge source add the domain **<https://learn.microsoft.com/>** and **Add**.
 
 !["Add Microsoft Learn as knowledge source"](./assets/lab02_02_addknowledge3.png)
 
@@ -75,7 +73,6 @@ We want to give the agent the ability to know which requirements a Windows 11 de
 !["Test chat mode in agent"](./assets/lab02_02_testing2.png)
 
 In Test mode you can always see what the agent is referencing in the main window, in this case we see that it is using the information it got from learn.microsoft.com! Awesome, now our agent always has access to the most current information about requirements around Windows devices.
-
 
 ## 🎨 Use adaptive cards to make your agent look nicer
 
