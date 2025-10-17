@@ -129,6 +129,8 @@ Let's start by creating a topic:
 
     ![Site Address](./assets/Lab2_3_1_06_SiteAddress.png)
 
+If you want to import that device data to your own SharePoint site you can download it **[Devices CSV with SharePoint schema](https://github.com/microsoft/scs25-copilot-studio-extensibility/blob/main/docs/lab-02/resources/devices.csv)**
+
 1. Select the **dropdown menu** under _List name_ and select **Devices**
 
     ![List name](./assets/Lab2_3_1_07_ListName.png)
