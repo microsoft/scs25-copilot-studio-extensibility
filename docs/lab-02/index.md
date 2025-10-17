@@ -342,7 +342,7 @@ The **Device Management** app automatically opens the view for the table **Devic
 
 ![Import CSV Wizard - File](./assets/lab02_04_dataverse5.png)
 
-For this download the following demo CSV LINK. and select it in the **Import from CSV** dialog.
+For this download the following demo CSV **[Device Defect Demo CSV](https://github.com/microsoft/scs25-copilot-studio-extensibility/blob/main/docs/lab-02/resources/device_defects.csv)** and select it in the **Import from CSV** dialog.
 
 ![Import CSV - File Delimiter](./assets/lab02_04_dataverse6.png)
 
@@ -360,8 +360,23 @@ If successful you will see records in the **Device Defect** table after a short 
 
 ![Imported Records](./assets/lab02_04_dataverse8.png)
 
+Now we want to make this data accessible to out agent. For this navigate back to **Copilot Studio**. In Copilot Studio the most simple way of doing this is **Knowledge Sources**. To add one, click on **Knowledge** and **Add Knowledge**.
 
+!["Add Knowledge"](./assets/lab02_02_addknowledge.png)
 
+In the Add Knowledge Wizard select **Dataverse**
+
+!["Add Knowledge - Dataverse"](./assets/lab02_04_knowledge_dataverse1.png)
+
+In the next screen you can select up to 15 tables from Dataverse. In our case we only want **Device Defects** select this table and click on **Add to Agent**.
+
+!["Add Knowledge - Table Selection"](./assets/lab02_04_knowledge_dataverse2.png)
+
+Awesome! Our Agent can now access the Device Defects in Dataverse. Time to test it, so click on **Test** and try to get your agent to evaluate available devices against their defects. You will see that it starts to use Dataverse as a Knowledge Source. You can use this prompt: **Across all device types which should be avoided because it has the most Device Defects?**
+
+!["Add Knowledge - Table Selection"](./assets/lab02_04_knowledge_dataverse3.png)
+
+Try out other prompts to also combine the other already added sources of the agent!
 
 ## ✨ Enrich your agent with AI Prompts
 
