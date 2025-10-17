@@ -7,7 +7,75 @@ In this lab, you will go through the following tasks:
 - Add Dataverse as a knowledge source
 - Enrich your agent with AI Prompts
 
-## 🌐 Add a website as a knowledge source - Microsoft Learn (Mats)
+## 🤖 Create your agent
+
+### Create a solution
+
+Best Practice for everything in the Power Platform: Work INSIDE solutions. They are great for organizing your customizations and some features only work here plus they over ALM capabilities (remember from last lab?).
+
+Because of that our first step within **[make.powerapps.com](https://make.powerapps.com)** is to navigate to **Solutions** on the left hand side and click on **New Solution**
+
+!["Create new solution"](./assets/lab03_conblank_01_createsolution.png)
+
+In the dialog which open give your solution a meaningful name and select either create an own publisher by clicking **New** or use the **Default Publisher** named after your environment.
+
+!["Create Solution Dialog"](./assets/lab02_01_solutionwizard.png)
+
+> [!NOTE]
+> Using the Default Publisher is not considered best practice because you have no control about the technical prefix all your components will receive. 
+
+Congrats you have a solution for doing our Agent development! Every journey starts with the first step 💪
+
+### Create the agent inside the solution
+
+Now we are going to create our agent. Navigate to your newly created solution select **New** -> **Agent** -> **Agent**, this will redirect you to Copilot Studio where all the agent magic happens.
+
+!["Create agent"](./assets/lab02_01_createagent.png)
+
+
+### Copilot Studio
+
+Now we are in the Agent editing experience. First step give the agent a name. If you started in the solution to create the agent it will already be linked, if you started in Copilot Studio you connect the Agent with our solution, for this select the three dots and select **Update advanced settings**.
+
+!["Create Agent in Copilot Studio"](./assets/lab02_01_copilotstudio1.png)
+
+Select the solution you created before and press **Update**. Now your agent is attached to your solution.
+
+!["Connect with a solution"](./assets/lab02_01_copilotstudio2.png)
+
+After creating the agent, add **Instructions**. In our lab we are going to create an agent to help users picking new devices when ordering with internal IT.
+
+In the next step we will add Microsoft Learn as a Knowledge source to ground the agent in current information about Prompts and compatibilities. Especially we want to use it as a source to get information about what requirement Windows 11 devices have to connect that info in the next steps with our internal device datastores.
+
+
+## 🌐 Add a website as a knowledge source - Microsoft Learn
+
+We are going to start extending our agent by adding **Knowledge** to it. In Copilot Studio the most simple way of doing this is **Knowledge Sources**. To add one, click on **Knowledge** and **Add Knowledge**.
+
+!["Add Knowledge"](./assets/lab02_02_addknowledge.png)
+
+In the opening dialog you can select between all the available options provided by Microsoft. We are going to use **Public Website** to get **Real-Time** data.
+
+!["Add Public Website"](./assets/lab02_02_addknowledge2.png)
+
+To add Microsoft Learn as a knowledge source add the domain **https://www.microsoft.com/** and **Add**. 
+
+!["Add Microsoft Learn as knowledge source"](./assets/lab02_02_addknowledge3.png)
+
+In the next step give it a name and a useful description. Afterward click on **Add to Agent** to finalize adding the knowledge source. This might take a short while.
+
+Let's test it! Click on **Test** in the right hand top corner to open the chat windows to test your agent with the knowledge you added before.
+
+!["Test chat mode in agent"](./assets/lab02_02_testing.png)
+
+We want to give the agent the ability to know which requirements a Windows 11 device needs to fulfil, that knowledge is on learn.microsoft.com so let's test our agent with the following prompt:
+
+**Which hardware requirements does a device need to fulfill to be able to run Windows 11?**
+
+!["Test chat mode in agent"](./assets/lab02_02_testing2.png)
+
+In Test mode you can always see what the agent is referencing in the main window, in this case we see that it is using the information it got from learn.microsoft.com! Awesome, now our agent always has access to the most current information about requirements around Windows devices.
+
 
 ## 🎨 Use adaptive cards to make your agent look nicer
 
@@ -250,7 +318,65 @@ Let's start by creating a topic:
     > It might also show you a summarization message (which is bug that will be fixed soon!)
     > ![Message](./assets/Lab2_3_1_20_Message.png)
 
-## 📊 Add Dataverse as a knowledge source - Dataverse entity suppliers / data excel file (Mats)
+## 📊 Add Dataverse as a knowledge source - Dataverse entity suppliers / data excel file
+
+Next we want our agent to have access to our device support database to check which devices are known for having a lot of defects to avoid those. For that we will of course use a proper database - Dataverse. There is a prepared **Device Management** solution which we will import to have a structure for the demo data.
+
+Download  **[Device Management Solution](https://github.com/microsoft/scs25-copilot-studio-extensibility/blob/main/docs/lab-02/resources/LabDeviceSupport_1_0_0_1_managed.zip)** and open  **[make.powerapps.com](https://make.powerapps.com)**. You will be redirected to your Developer Environment. There click on solutions and on **Import**.
+
+![Import Solution](./assets/lab02_04_dataverse1.png)
+
+And select the downloaded soltion and click on **Import** in the Import Wizard.
+
+![Import Solution Wizard](./assets/lab02_04_dataverse2.png)
+
+This will take a short while, but after a few seconds to minutes you will see the success message. After the sucessful import click on **Apps**. The solution contains one Model Driven App we will use to import the demo data.
+
+![Open Dataverse Apps](./assets/lab02_04_dataverse3.png)
+
+Click on **Play** for the **Device Management** app.
+
+![Open Device Management App](./assets/lab02_04_dataverse4.png)
+
+The **Device Management** app automatically opens the view for the table **Device Defects**. Into this table we will import demo data for defects of devices to make this available to our agent as a second step. Click on the three dots and then on **Import from Excel** and in the submenu on **Import CSV**
+
+![Import CSV Wizard - File](./assets/lab02_04_dataverse5.png)
+
+For this download the following demo CSV **[Device Defect Demo CSV](https://github.com/microsoft/scs25-copilot-studio-extensibility/blob/main/docs/lab-02/resources/device_defects.csv)** and select it in the **Import from CSV** dialog.
+
+![Import CSV - File Delimiter](./assets/lab02_04_dataverse6.png)
+
+Click **Next** and make sure that you select **Semicolon** as Field Delimiter, after click on **Review Mapping**.
+
+![Import CSV - Field Mapping](./assets/lab02_04_dataverse7.png)
+
+The import wizard makes suggestions for field mappings of the CSV columns to Dataverse fields. Check those, most should be okay, you will probably just have to select **Faulty Device** as a boolean field and match the values **false** and **true** from the CSV. **Confirm the mapping of the option values with Okay!**
+
+![Import CSV - Start Import](./assets/lab02_04_dataverse8.png)
+
+After checking the mappings click on **Import** and **Confirm** the import in the next  dialog. The import might take a short while. Click on **Track Progress** to see a status of the import.
+
+If successful you will see records in the **Device Defect** table after a short while:
+
+![Imported Records](./assets/lab02_04_dataverse8.png)
+
+Now we want to make this data accessible to out agent. For this navigate back to **Copilot Studio**. In Copilot Studio the most simple way of doing this is **Knowledge Sources**. To add one, click on **Knowledge** and **Add Knowledge**.
+
+!["Add Knowledge"](./assets/lab02_02_addknowledge.png)
+
+In the Add Knowledge Wizard select **Dataverse**
+
+!["Add Knowledge - Dataverse"](./assets/lab02_04_knowledge_dataverse1.png)
+
+In the next screen you can select up to 15 tables from Dataverse. In our case we only want **Device Defects** select this table and click on **Add to Agent**.
+
+!["Add Knowledge - Table Selection"](./assets/lab02_04_knowledge_dataverse2.png)
+
+Awesome! Our Agent can now access the Device Defects in Dataverse. Time to test it, so click on **Test** and try to get your agent to evaluate available devices against their defects. You will see that it starts to use Dataverse as a Knowledge Source. You can use this prompt: **Across all device types which should be avoided because it has the most Device Defects?**
+
+!["Add Knowledge - Table Selection"](./assets/lab02_04_knowledge_dataverse3.png)
+
+Try out other prompts to also combine the other already added sources of the agent!
 
 ## ✨ Enrich your agent with AI Prompts
 

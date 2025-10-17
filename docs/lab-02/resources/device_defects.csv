@@ -1,0 +1,121 @@
+Device Name;Date;Defect Description;Faulty Device;Solution
+Surface Laptop;2025-09-26;USB port not working;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-05-02;Battery overheating;true;Replaced faulty battery unit causing overheating.
+Surface Studio;2025-02-10;Display flicker;false;Updated drivers and advised user on proper shutdown procedure.
+Surface Laptop;2025-01-20;Overheating;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-04-26;Screen freeze;true;Screen module replaced due to hardware malfunction.
+Surface Laptop;2025-01-29;Overheating;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-05-18;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-02-10;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-02-13;Keyboard disconnects;true;Replaced keyboard connector; internal circuit defect.
+Surface Pro;2025-06-21;Battery overheating;false;User left device on high brightness; advised power management settings.
+Surface Laptop;2025-07-30;Battery drain;true;Replaced faulty battery unit causing overheating.
+Surface Pro;2025-08-31;Keyboard disconnects;false;Reconnected keyboard; user did not attach it correctly.
+Surface Laptop;2025-03-13;USB port not working;false;Explained correct usage; no hardware issue detected.
+Surface Studio;2025-03-29;Display flicker;false;Updated drivers and advised user on proper shutdown procedure.
+Surface Studio;2025-02-21;Slow performance;false;Explained correct usage; no hardware issue detected.
+Surface Studio;2025-01-05;Power button unresponsive;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-10-02;Battery overheating;true;Replaced faulty battery unit causing overheating.
+Surface Pro;2025-05-27;Touchscreen unresponsive;false;Updated drivers and advised user on proper shutdown procedure.
+Surface Laptop;2025-04-05;Overheating;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-07-22;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-02-05;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Laptop;2025-03-17;Battery drain;false;User left device on high brightness; advised power management settings.
+Surface Pro;2025-10-05;Keyboard disconnects;false;Reconnected keyboard; user did not attach it correctly.
+Surface Studio;2025-04-05;Slow performance;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Studio;2025-06-06;Display flicker;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-04-03;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Studio;2025-04-10;Power button unresponsive;false;Explained correct usage; no hardware issue detected.
+Surface Studio;2025-03-22;Power button unresponsive;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-09-28;Screen freeze;true;Screen module replaced due to hardware malfunction.
+Surface Studio;2025-08-30;Power button unresponsive;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-02-15;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-01-09;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-08-18;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Studio;2025-06-02;Slow performance;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Studio;2025-08-09;Power button unresponsive;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-07-08;Keyboard disconnects;true;Replaced keyboard connector; internal circuit defect.
+Surface Pro;2025-08-21;Touchscreen unresponsive;false;Updated drivers and advised user on proper shutdown procedure.
+Surface Pro;2025-07-02;Keyboard disconnects;true;Replaced keyboard connector; internal circuit defect.
+Surface Pro;2025-03-18;Keyboard disconnects;true;Replaced keyboard connector; internal circuit defect.
+Surface Studio;2025-07-30;Power button unresponsive;false;Explained correct usage; no hardware issue detected.
+Surface Laptop;2025-06-22;Battery drain;false;User left device on high brightness; advised power management settings.
+Surface Laptop;2025-02-13;USB port not working;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-07-25;Battery overheating;true;Replaced faulty battery unit causing overheating.
+Surface Studio;2025-09-30;Power button unresponsive;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-04-28;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-01-25;Keyboard disconnects;true;Replaced keyboard connector; internal circuit defect.
+Surface Pro;2025-06-09;Keyboard disconnects;true;Replaced keyboard connector; internal circuit defect.
+Surface Pro;2025-03-14;Keyboard disconnects;true;Replaced keyboard connector; internal circuit defect.
+Surface Studio;2025-06-10;Display flicker;false;Updated drivers and advised user on proper shutdown procedure.
+Surface Pro;2025-08-31;Touchscreen unresponsive;false;Updated drivers and advised user on proper shutdown procedure.
+Surface Pro;2025-03-23;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-09-07;Battery overheating;true;Replaced faulty battery unit causing overheating.
+Surface Pro;2025-05-09;Keyboard disconnects;true;Replaced keyboard connector; internal circuit defect.
+Surface Studio;2025-10-03;Slow performance;false;Explained correct usage; no hardware issue detected.
+Surface Laptop;2025-01-19;Battery drain;false;User left device on high brightness; advised power management settings.
+Surface Pro;2025-01-29;Screen freeze;true;Screen module replaced due to hardware malfunction.
+Surface Studio;2025-01-07;Slow performance;false;Explained correct usage; no hardware issue detected.
+Surface Studio;2025-09-02;Display flicker;false;Updated drivers and advised user on proper shutdown procedure.
+Surface Pro;2025-07-31;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Studio;2025-08-21;Power button unresponsive;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-02-12;Screen freeze;false;Updated drivers and advised user on proper shutdown procedure.
+Surface Laptop;2025-08-16;Overheating;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-04-22;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-10-02;Battery overheating;true;Replaced faulty battery unit causing overheating.
+Surface Pro;2025-04-20;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-05-10;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-06-01;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Laptop;2025-01-04;Battery drain;true;Replaced faulty battery unit causing overheating.
+Surface Pro;2025-09-03;Screen freeze;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-01-30;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-02-14;Screen freeze;true;Screen module replaced due to hardware malfunction.
+Surface Laptop;2025-03-09;Overheating;false;Explained correct usage; no hardware issue detected.
+Surface Laptop;2025-05-20;Battery drain;true;Replaced faulty battery unit causing overheating.
+Surface Studio;2025-07-01;Display flicker;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-06-05;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Laptop;2025-02-10;Battery drain;true;Replaced faulty battery unit causing overheating.
+Surface Studio;2025-08-01;Power button unresponsive;false;Explained correct usage; no hardware issue detected.
+Surface Laptop;2025-06-17;Overheating;false;Explained correct usage; no hardware issue detected.
+Surface Laptop;2025-02-03;USB port not working;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-07-28;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-01-09;Battery overheating;true;Replaced faulty battery unit causing overheating.
+Surface Pro;2025-10-02;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-05-19;Battery overheating;false;User left device on high brightness; advised power management settings.
+Surface Pro;2025-01-10;Keyboard disconnects;false;Reconnected keyboard; user did not attach it correctly.
+Surface Laptop;2025-04-25;Overheating;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-04-28;Keyboard disconnects;true;Replaced keyboard connector; internal circuit defect.
+Surface Pro;2025-05-13;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-06-13;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-03-21;Keyboard disconnects;true;Replaced keyboard connector; internal circuit defect.
+Surface Laptop;2025-09-30;USB port not working;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-04-20;Wi-Fi not connecting;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-06-17;Screen freeze;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-09-28;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-08-18;Screen freeze;true;Screen module replaced due to hardware malfunction.
+Surface Laptop;2025-02-26;USB port not working;false;Explained correct usage; no hardware issue detected.
+Surface Laptop;2025-07-25;Battery drain;false;User left device on high brightness; advised power management settings.
+Surface Pro;2025-08-02;Battery overheating;true;Replaced faulty battery unit causing overheating.
+Surface Pro;2025-07-23;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-02-20;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Laptop;2025-05-24;Overheating;false;Explained correct usage; no hardware issue detected.
+Surface Studio;2025-09-24;Display flicker;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-04-13;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-05-06;Battery overheating;true;Replaced faulty battery unit causing overheating.
+Surface Pro;2025-07-01;Battery overheating;false;User left device on high brightness; advised power management settings.
+Surface Pro;2025-01-11;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-01-04;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Laptop;2025-08-23;USB port not working;false;Explained correct usage; no hardware issue detected.
+Surface Studio;2025-08-29;Slow performance;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-07-10;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Pro;2025-01-30;Wi-Fi not connecting;true;Hardware component replaced after diagnostics confirmed defect.
+Surface Laptop;2025-03-14;Overheating;false;Explained correct usage; no hardware issue detected.
+Surface Pro;2025-10-02;Keyboard disconnects;true;Replaced keyboard connector; internal circuit defect.
+Surface Pro;2025-02-20;Keyboard disconnects;true;Replaced keyboard connector; internal circuit defect.
+Surface Pro;2025-02-06;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Studio;2025-04-06;Power button unresponsive;false;Explained correct usage; no hardware issue detected.
+Surface Studio;2025-06-06;Slow performance;false;Explained correct usage; no hardware issue detected.
+Surface Studio;2025-04-21;Display flicker;false;Updated drivers and advised user on proper shutdown procedure.
+Surface Pro;2025-03-05;Keyboard disconnects;false;Reconnected keyboard; user did not attach it correctly.
+Surface Pro;2025-06-22;Touchscreen unresponsive;true;Screen module replaced due to hardware malfunction.
+Surface Pro;2025-04-22;Screen freeze;true;Screen module replaced due to hardware malfunction.
