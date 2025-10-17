@@ -342,3 +342,15 @@ Visibility in Power Automate will be displayed like this
 !["Visibility in Power Automate"](./assets/lab03_03_visibilitydisplay.png)
 
 So by taking care of these properties, you make your connectors a lot easier to use and more professionally looking. But at the same time, you also prepare them for AI 🙂
+
+## 💯 Adding the Custom Connector to your agent
+
+Now let's navigate back to Copilot Studio to add our Custom Connector to an agent. In Copilot Studio click on **Tools** and **Add Tool**
+
+!["Add Tool"](./assets/lab03_copilot0.png)
+
+Select **Connector** and search for your connector name, you will see all the actions you defined before!
+
+!["Add Custom Connector"](./assets/lab03_copilot1.png)
+
+You can add multiple Actions as tools, do this and test your agent with the Custom connector!
