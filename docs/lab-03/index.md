@@ -7,7 +7,7 @@ In this lab, you will go through the following tasks:
 * Setup authentication
 * Add operation with Parameters
 
-We will use the communit event API as an example to connect to.
+We will use the community event API as an example to connect to. You will later need to use an API key, for this workshop you can use the demo API Key **f785f5baf4f0470e809bdf097b994f62**, write it down for later.
 
 ## 🏗️ Create a solution
 
@@ -228,20 +228,20 @@ After this let's test our new function! **Update Connector** and move to the **T
 This works pretty well! But obviously this not an ideal user experience, you need to know very cryptic GUIDs and there is no support on how to enter them. Let's improve that in the next step!
 
 ## 🚀 Making an action dynamic
-In the previuos step we added an action with a parameter but noticed the usability was subpar. One way to improve is to replace the manual input field with **Dynamic Values** which are a drop-drown which is not hardcoded but instead uses value from another action.
+In the previous step we added an action with a parameter but noticed the usability was subpar. One way to improve is to replace the manual input field with **Dynamic Values** which are a drop-drown which is not hardcoded but instead uses value from another action.
 
 Basically, we want to achieve this when someone uses this action:
 - Make a call to the **Tracks** action to get available Tracks
 - Instead of their Id display a readable Description or Name
 - When making the call to the SessionByTrack API send the id instead of the displayed Name.
 
-Let's built this! 🙂
+Let's build this! 🙂
 
 We start back on the **Definition** page, select the SessionByTrack action and open the parameter:
 
 !["Edit Parameter"](./assets/lab03_01_editparameter.png)
 
-On the detail page we will take a more detailled look at the dropdown types. With these we can change the field from manual input to a dropdown from which a user can easily select a value.
+On the detail page we will take a more detailed look at the dropdown types. With these we can change the field from manual input to a dropdown from which a user can easily select a value.
 
 !["Dropdown Types"](./assets/lab03_01_dropdowntypes.png)
 
@@ -312,7 +312,7 @@ After confirming that you want to run the flow you can close the dialog and will
 
 !["Flow Success"](./assets/lab03_02_flowsuccess.png)
 
-Because we defined the Reponses of all our our actions it's also pretty easy to combine them. For example we can use the GET/Tracks action to get an array of all tracks and then iterate through them to get all sessions per track.
+Because we defined the Reponses of all our actions it's also pretty easy to combine them. For example we can use the GET/Tracks action to get an array of all tracks and then iterate through them to get all sessions per track.
 
 For this we add the GET/Tracks action above our GET/SessionsByTrack action and want to use it's output in it. For this you have to select **Enter Custom Value** in the dynamics dropdown to dynamically fill this value (🤪)
 
@@ -329,7 +329,7 @@ And the Custom Connector also knows that GET/Tracks returns an array, so it auto
 ## 🔥 Increase the UX with user-friendly names
 One thing you could quickly tell was that our clear **operation ids** are not very user friendly in these kinds of UIs. But the great thing is that we can actually do something about this and within the Custom Connector add more information. For this we will go back to our Custom Connector, edit it, and go to definitions to update our Actions.
 
-First we will create more detailled descriptions of the actions themselves. With these you can give your action friendly names and also provide additional explanations which will be displayed as extended texts or tooltips. And of course these descriptions are immensly important for any AI you want to use your Custom Connector with.
+First we will create more detailed descriptions of the actions themselves. With these you can give your action friendly names and also provide additional explanations which will be displayed as extended texts or tooltips. And of course these descriptions are immensely  important for any AI you want to use your Custom Connector with.
 
 !["Action Details"](./assets/lab03_03_actiondetails.png)
 
