@@ -8,6 +8,13 @@ This page contains helpful links and resources for the Copilot Studio Extensibil
 - [This Workshop](https://aka.ms/scs25-copilot-studio) - Direct link to this workshop repository
 - [South Coast Summit on LinkedIn](https://www.linkedin.com/company/south-coast-summit/) - Follow for updates and announcements
 
+### Workshop presentations
+
+- [Lab 01](https://raw.githubusercontent.com/microsoft/scs25-copilot-studio-extensibility/refs/heads/main/docs/presentations/Lab01.pptx)
+- [Lab 02](https://raw.githubusercontent.com/microsoft/scs25-copilot-studio-extensibility/refs/heads/main/docs/presentations/Lab02.pptx)
+- [Lab 03](https://raw.githubusercontent.com/microsoft/scs25-copilot-studio-extensibility/refs/heads/main/docs/presentations/Lab03.pptx)
+- [Lab 04](https://raw.githubusercontent.com/microsoft/scs25-copilot-studio-extensibility/refs/heads/main/docs/presentations/Lab04.pptx)
+
 ## 🤖 Copilot Studio
 
 ### Official Documentation
