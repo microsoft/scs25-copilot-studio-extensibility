@@ -33,6 +33,7 @@ This page contains helpful links and resources for the Copilot Studio Extensibil
 - [Custom Connectors Overview](https://learn.microsoft.com/connectors/custom-connectors/) - Build your own connectors
 - [Create a custom connector from scratch](https://learn.microsoft.com/connectors/custom-connectors/define-blank) - Step-by-step guide
 - [Create a custom connector with an OpenAPI extension](https://learn.microsoft.com/connectors/custom-connectors/openapi-extensions) - Advanced connector customization
+- [Power Platform Connectors Repository](https://github.com/microsoft/powerplatformconnectors)
 
 ### OpenAPI & API Documentation
 
