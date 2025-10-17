@@ -127,9 +127,10 @@ In the terminal at the bottom of Visual Studio Code, we are going to configure a
     Ready to accept connections for tunnel: x.x
 
     <!-- markdownlint-disable-next-line MD033 -->
-    > [!Alert] It's very important to select the URL that looks like this: <https://x-3000.x.devtunnels.ms>
+    > [!WARNING]
+    > It's very important to select the URL that looks like this: <https://x-3000.x.devtunnels.ms>
     >
-    > The other URL - with *:3000* in the URL - will give you errors later on.
+    > The other URL - with *:3000* at the end of the URL - will give you errors later on.
 
 1. Open the second URL after connect via browser by using **ctrl + click**
 
