@@ -170,7 +170,7 @@ If you want to import that device data to your own SharePoint site you can downl
     ![Set a variable value](./assets/Lab2_3_1_11_SetVariable.png)
 
 1. Select **Select a variable** under _Set Variable_ and select **Create a new variable**
-1. Select **Var1** and rename it to **VarFilter**
+1. Select **Var1** and rename it to **VarFilter** and close to dialog.
 1. Select **...**, select **Formula** and enter the following formula in the _fx_ input:
 
     ```text
@@ -357,7 +357,7 @@ After checking the mappings click on **Import** and **Confirm** the import in th
 
 If successful you will see records in the **Device Defect** table after a short while:
 
-![Imported Records](./assets/lab02_04_dataverse8.png)
+![Imported Records](./assets/lab02_04_dataverse9.png)
 
 Now we want to make this data accessible to out agent. For this navigate back to **Copilot Studio**. In Copilot Studio the most simple way of doing this is **Knowledge Sources**. To add one, click on **Knowledge** and **Add Knowledge**.
 
