@@ -5,7 +5,6 @@ Before we can get started with the other labs, we need to make sure we have ever
 In this lab, you will go through the following tasks:
 
 * Install required development tools (Microsoft Edge, Python, VS Code, Git, DevTunnels)
-* Set up your local development environment
 * Log into the lab environment
 
 ## ✅ Prerequisites
@@ -15,7 +14,6 @@ This lab requires several tools and resources to be installed on your local deve
 * **Microsoft Edge**: Browser for testing and accessing Copilot Studio
 * **Python (LTS)**: Runtime environment for building custom connectors and extensions
 * **VS Code**: Primary code editor for development work
-* **Git for Windows**: Version control for managing your code
 * **DevTunnels**: Tool for creating secure tunnels to expose local services for testing
 
 **Note:** If you already have any of these tools installed on your machine, you can skip their installation and proceed to the next tool. Make sure your existing installations are up to date.
@@ -45,17 +43,6 @@ To install Visual Studio Code:
 1. Download from [code.visualstudio.com](https://code.visualstudio.com/)
 1. Run the installer
 1. Recommended: Check "Add to PATH" during installation
-
-### Git for Windows
-
-To install Git:
-
-1. Download from [git-scm.com/download/win](https://git-scm.com/download/win)
-1. Run the installer with these recommended settings:
-   * Use Git from the command line and 3rd-party software
-   * Use bundled OpenSSH
-   * Use OpenSSL library
-   * Checkout Windows-style, commit Unix-style line endings
 
 ### DevTunnels
 
