@@ -43,6 +43,8 @@ This page contains helpful links and resources for the Copilot Studio Extensibil
 
 - [Copilot Studio ❤️ MCP](https://aka.ms/mcsmcp/lab) - Copilot Studio & MCP Lab
 - [Copilot Studio MCP Servers](https://aka.ms/copilot-studio-mcp) - Example servers that work with Copilot Studio
+- [Dataverse MCP Labs](https://aka.ms/dataverse/mcp/lab)
+- [MCP for Beginners](https://aka.ms/mcp-for-beginners)
 - [Model Context Protocol Documentation](https://modelcontextprotocol.io/) - Official MCP documentation
 - [MCP GitHub Repository](https://github.com/modelcontextprotocol) - Open source MCP resources
 - [Building MCP Servers](https://modelcontextprotocol.io/docs/concepts/servers) - Server development guide
